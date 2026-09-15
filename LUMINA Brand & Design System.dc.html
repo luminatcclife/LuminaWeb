@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet" />
+<style>
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  doc-page:not(:defined) { visibility: hidden; }
+  a { color: #C99579; text-decoration-color: rgba(201,149,121,.45); }
+  a:hover { color: #3F4A63; }
+</style>
+<script src="./doc-page.js"></script>
+</helmet>
+<doc-page margin="0.8in" style="font-family:Manrope, Helvetica, sans-serif; color:#3F4A63; background:#E7DFD3; --doc-sheet-bg:#F7F2EA">
+
+<div style="position:relative; overflow:hidden; min-height:8.5in; margin:-0.8in -0.8in 0; padding:0.8in 0.8in 0; display:flex; flex-direction:column; break-inside:avoid">
+  <div style="position:absolute; top:-1.6in; right:-1.2in; width:4.6in; height:4.6in; border-radius:52% 48% 44% 56% / 50% 54% 46% 50%; background:rgba(217,181,162,.34)"></div>
+  <div style="position:absolute; top:-0.7in; right:1.35in; width:1.9in; height:1.9in; border-radius:46% 54% 52% 48% / 54% 46% 54% 46%; background:rgba(165,173,142,.2)"></div>
+  <div style="position:absolute; bottom:-1.6in; left:-1.2in; width:4.1in; height:4.1in; border-radius:48% 52% 56% 44% / 46% 52% 48% 54%; background:rgba(201,173,120,.22)"></div>
+
+  <div style="position:relative; padding-top:0.7in">
+    <div style="font-family:Fraunces, Georgia, serif; font-size:34px; color:#C9AD78; line-height:1">✦</div>
+    <h1 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:76px; line-height:0.98; letter-spacing:0.01em; margin:20px 0 0; color:#3F4A63">LUMINA</h1>
+    <div style="font-weight:500; font-size:17px; letter-spacing:.24em; text-transform:uppercase; color:#C99579; margin-top:16px">by sunny</div>
+    <div style="width:2.4in; height:1px; background:rgba(63,74,99,.28); margin:30px 0 0"></div>
+    <div style="font-family:Fraunces, Georgia, serif; font-weight:500; font-size:30px; line-height:1.2; margin-top:28px; max-width:5.2in">Brand &amp; Design System</div>
+    <div style="font-size:15px; line-height:1.6; color:rgba(63,74,99,.85); margin-top:12px; max-width:4.6in">Propuesta de manual · versión alterna 1.0. Criterios cerrados de identidad, color, tipografía, imagen y componentes para LUMINA y Hogar&nbsp;Studio.</div>
+    <div style="font-family:Fraunces, Georgia, serif; font-style:italic; font-size:21px; margin-top:34px; color:#3F4A63">“Diseña. Organiza. Transforma tu hogar.”</div>
+  </div>
+
+  <div style="position:relative; margin-top:auto; padding-top:0.6in; display:flex; justify-content:space-between; align-items:flex-end; gap:20px">
+    <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.1em; line-height:1.9; color:rgba(63,74,99,.72)">
+      REF #LUM-2026<br />
+      SEPTIEMBRE 2026 · 8 SECCIONES<br />
+      DOCUMENTO INTERNO DE MARCA
+    </div>
+    <div style="font-family:Caveat, cursive; font-size:26px; color:#C99579; line-height:1">— sunny</div>
+  </div>
+</div>
+
+<div style="break-before:page; margin-top:1.1in; font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#C99579; padding-bottom:12px; border-bottom:1px solid rgba(63,74,99,.18)">Contenido</div>
+
+<div style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px 28px; margin:4px 0 0; font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:.06em; color:rgba(63,74,99,.75); break-inside:avoid">
+  <div>01 · ADN DE MARCA Y LOGOTIPO</div>
+  <div>05 · ELEMENTOS VISUALES</div>
+  <div>02 · VOZ Y TONO</div>
+  <div>06 · FOTOGRAFÍA</div>
+  <div>03 · COLORES</div>
+  <div>07 · ILUSTRACIÓN</div>
+  <div>04 · TIPOGRAFÍA</div>
+  <div>08 · COMPONENTES</div>
+</div>
+
+<sc-if value="{{ showEditorNote }}" hint-placeholder-val="{{ true }}">
+<div style="margin-top:34px; background:#FFFDF9; border-left:4px solid #A5AD8E; padding:24px 26px 26px; border-radius:2px">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:#C99579">Nota del editor de marca</div>
+  <h2 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:24px; line-height:1.2; margin:12px 0 0">Por qué esta es una propuesta “distinta”</h2>
+  <p style="font-size:14.5px; line-height:1.65; margin:14px 0 0">Este documento no repite tal cual las notas de trabajo que ya existen en la carpeta del proyecto. Están leídas todas, y en varios puntos había opciones abiertas o contradicciones menores que aquí se cierran con un criterio único, para que el manual sirva de referencia final y no de lluvia de ideas. Los cambios de criterio más relevantes:</p>
+  <ol style="margin:14px 0 0; padding-left:20px; font-size:14.5px; line-height:1.6">
+    <li style="margin-bottom:9px"><strong style="font-weight:700">Jerarquía tipográfica cerrada</strong> — Fraunces se reserva para identidad y titulares (Logo, H1, H2). Nunca para párrafos largos: aporta carácter, no legibilidad de lectura continua.</li>
+    <li style="margin-bottom:9px"><strong style="font-weight:700">Una sola versión del subtítulo</strong> — “by sunny” se resuelve en Manrope, no en manuscrita. La manuscrita (Caveat) queda como recurso decorativo excepcional —firmas, notas a mano—, nunca como parte fija del logotipo.</li>
+    <li style="margin-bottom:9px"><strong style="font-weight:700">Regla de las 3 fuentes</strong> — Máximo 3 familias tipográficas activas en cualquier pieza. Fraunces + Manrope cubren el 95% de los casos; JetBrains Mono entra solo cuando hay una razón funcional (cotas, códigos, datos).</li>
+    <li style="margin-bottom:9px"><strong style="font-weight:700">Cero negro puro</strong> — En ningún soporte de Lumina o Hogar Studio se usa negro puro (#000000). El azul grisáceo #3F4A63 hace de “tinta” en todo el sistema: es más cálido y coherente con la paleta pastel.</li>
+    <li><strong style="font-weight:700">Ilustración con dos capas, no una</strong> — Se distinguen dos registros que en el material de origen a veces se mezclaban: ilustración 3D pastel (iconografía de producto, Hogar Studio) e ilustración lineal botánica (acentos editoriales en documentos). Ver sección 07.</li>
+  </ol>
+  <p style="font-size:14.5px; line-height:1.65; margin:14px 0 0">Si alguno de estos cinco criterios no encaja con lo previsto, se puede reabrir: son decisiones de diseño, no dogmas. Pero si no se cierran, el sistema no funciona como sistema —vuelve a ser una carpeta de ideas sueltas.</p>
+</div>
+</sc-if>
+
+<div style="break-before:page; padding-top:4px">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#C99579">Sección 01</div>
+  <h2 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:30px; line-height:1.15; margin:8px 0 0">ADN de marca &amp; Logotipo</h2>
+  <div style="height:1px; background:rgba(63,74,99,.18); margin:18px 0 0"></div>
+</div>
+
+<h3 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:20px; margin:24px 0 0">Qué es LUMINA</h3>
+<p style="font-size:15px; line-height:1.65; margin:10px 0 0">LUMINA es la marca madre; <em>by sunny</em> es la firma personal detrás de ella; <strong style="font-weight:700">Hogar Studio</strong> es el producto en el que esa marca se pone a trabajar. LUMINA no necesita explicar qué hace —el nombre ya carga una connotación emocional fuerte—, así que su función es sostener un universo visual construido alrededor de la luz: la chispa que enciende una idea antes de que se convierta en un proyecto de organización o reforma del hogar.</p>
+<p style="font-size:15px; line-height:1.65; margin:12px 0 0"><strong style="font-weight:700">Territorio de marca:</strong> luz · creatividad · hogar · ideas · transformación · calma · belleza funcional. “A pesar de todo” se conserva como concepto interno —el espíritu con el que se afrontan los proyectos—, pero no se usa como eslogan comercial: tiene demasiada personalidad para gastarla debajo de un logotipo. El eslogan público es más simple y explica el producto en cinco palabras.</p>
+
+<h3 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:20px; margin:28px 0 0">Los cuatro pilares de experiencia</h3>
+<p style="font-size:15px; line-height:1.65; margin:10px 0 0">Rigen cualquier decisión gráfica o tipográfica, desde una portada de dossier hasta un icono de la app de Hogar Studio.</p>
+<div style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px; margin-top:16px">
+  <div style="background:#FFFDF9; padding:16px 18px; border-radius:10px; break-inside:avoid">
+    <div style="font-family:'JetBrains Mono', monospace; font-size:11px; color:#C9AD78">01</div>
+    <div style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:16px; margin-top:6px">Calma visual</div>
+    <div style="font-size:13.5px; line-height:1.55; margin-top:5px">Entornos limpios, paleta desaturada y respiración tipográfica amplia.</div>
+  </div>
+  <div style="background:#FFFDF9; padding:16px 18px; border-radius:10px; break-inside:avoid">
+    <div style="font-family:'JetBrains Mono', monospace; font-size:11px; color:#C9AD78">02</div>
+    <div style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:16px; margin-top:6px">Foco atencional</div>
+    <div style="font-size:13.5px; line-height:1.55; margin-top:5px">Jerarquía clara que guía el ojo sin saturar ni generar fatiga visual.</div>
+  </div>
+  <div style="background:#FFFDF9; padding:16px 18px; border-radius:10px; break-inside:avoid">
+    <div style="font-family:'JetBrains Mono', monospace; font-size:11px; color:#C9AD78">03</div>
+    <div style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:16px; margin-top:6px">Baja fricción cognitiva</div>
+    <div style="font-size:13.5px; line-height:1.55; margin-top:5px">Módulos ordenados, tablas intuitivas, iconos reconocibles al instante.</div>
+  </div>
+  <div style="background:#FFFDF9; padding:16px 18px; border-radius:10px; break-inside:avoid">
+    <div style="font-family:'JetBrains Mono', monospace; font-size:11px; color:#C9AD78">04</div>
+    <div style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:16px; margin-top:6px">Diseño con propósito</div>
+    <div style="font-size:13.5px; line-height:1.55; margin-top:5px">Cada color, forma o bloque cumple una función comunicativa concreta.</div>
+  </div>
+</div>
+
+<h3 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:20px; margin:28px 0 0">El símbolo de la chispa (✦)</h3>
+<p style="font-size:15px; line-height:1.65; margin:10px 0 0">La chispa representa el destello de una idea y el toque humano detrás de cada proyecto. Sustituye al punto de la “I” en LUMINA y funciona también como recurso independiente —favicon, sello de documentos, icono de app—. Existen cuatro variaciones, cada una con una intención de uso distinta y ninguna intercambiable con las demás:</p>
+<ul style="margin:12px 0 0; padding-left:20px; font-size:15px; line-height:1.6">
+  <li style="margin-bottom:8px"><strong style="font-weight:700">Chispa Clásica</strong> — estrella estilizada de cuatro puntas en Dorado Chispa <span style="font-family:'JetBrains Mono', monospace; font-size:13px">#C9AD78</span>. Encabezados principales, separadores de sección, acento sobre citas.</li>
+  <li style="margin-bottom:8px"><strong style="font-weight:700">Chispa Botánica</strong> — la chispa se funde con una hoja en Salvia <span style="font-family:'JetBrains Mono', monospace; font-size:13px">#A5AD8E</span> y Terracota <span style="font-family:'JetBrains Mono', monospace; font-size:13px">#C99579</span>. Portadas de dossiers de jardinería, reformas orgánicas y decoración.</li>
+  <li style="margin-bottom:8px"><strong style="font-weight:700">Monograma L</strong> — insignia circular con la letra “L”. Firmas de autoría, marcas de agua sobre imágenes de portada, isotipo para redes sociales.</li>
+  <li><strong style="font-weight:700">Chispa Hogar Studio</strong> — la chispa se integra en el tejado de la casa-hoja de Hogar Studio. Co-branding, fichas de gestión de reformas, checklists y planos.</li>
+</ul>
+
+<h3 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:20px; margin:28px 0 0">Logotipo: versiones y usos</h3>
+<table style="width:100%; border-collapse:collapse; margin-top:14px; font-size:13px">
+  <thead>
+    <tr>
+      <th style="text-align:left; background:#3F4A63; color:#FFFDF9; font-family:Manrope,sans-serif; font-weight:600; font-size:10px; letter-spacing:.12em; text-transform:uppercase; padding:9px 12px; width:22%">Versión</th>
+      <th style="text-align:left; background:#3F4A63; color:#FFFDF9; font-family:Manrope,sans-serif; font-weight:600; font-size:10px; letter-spacing:.12em; text-transform:uppercase; padding:9px 12px">Uso principal</th>
+      <th style="text-align:left; background:#3F4A63; color:#FFFDF9; font-family:Manrope,sans-serif; font-weight:600; font-size:10px; letter-spacing:.12em; text-transform:uppercase; padding:9px 12px; width:28%">No usar para</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background:#FFFDF9; padding:11px 12px; vertical-align:top; font-weight:600; line-height:1.5">Lumina principal</td>
+      <td style="background:#FFFDF9; padding:11px 12px; vertical-align:top; line-height:1.5">Vertical, con la chispa en el punto de la “I”. Portadas, sellos, perfil social.</td>
+      <td style="background:#FFFDF9; padding:11px 12px; vertical-align:top; line-height:1.5">Cabeceras horizontales estrechas.</td>
+    </tr>
+    <tr>
+      <td style="padding:11px 12px; vertical-align:top; font-weight:600; line-height:1.5">Lumina horizontal</td>
+      <td style="padding:11px 12px; vertical-align:top; line-height:1.5">Con “by sunny” alineado debajo o al lado. Membretes, pies de página, firmas de documento.</td>
+      <td style="padding:11px 12px; vertical-align:top; line-height:1.5">Espacios cuadrados o verticales.</td>
+    </tr>
+    <tr>
+      <td style="background:#FFFDF9; padding:11px 12px; vertical-align:top; font-weight:600; line-height:1.5">Símbolo suelto ✦</td>
+      <td style="background:#FFFDF9; padding:11px 12px; vertical-align:top; line-height:1.5">Chispa aislada, cualquier variación. Favicon, icono de app, marca de agua, viñetas.</td>
+      <td style="background:#FFFDF9; padding:11px 12px; vertical-align:top; line-height:1.5">Como logotipo principal en portadas oficiales.</td>
+    </tr>
+    <tr>
+      <td style="padding:11px 12px; vertical-align:top; font-weight:600; line-height:1.5">Hogar Studio</td>
+      <td style="padding:11px 12px; vertical-align:top; line-height:1.5">Isotipo casa-hoja + wordmark “Hogar Studio”. Producto, checklists, fichas de proyecto.</td>
+      <td style="padding:11px 12px; vertical-align:top; line-height:1.5">Comunicación que hable de LUMINA como marca madre.</td>
+    </tr>
+    <tr>
+      <td style="background:#FFFDF9; padding:11px 12px; vertical-align:top; font-weight:600; line-height:1.5">Lumina + Hogar Studio</td>
+      <td style="background:#FFFDF9; padding:11px 12px; vertical-align:top; line-height:1.5">Firma compuesta de co-branding. Pie de página del producto, cierre de informes.</td>
+      <td style="background:#FFFDF9; padding:11px 12px; vertical-align:top; line-height:1.5">Como lockup único sin espacio de respiración entre ambos.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:20px; margin:28px 0 0">Reglas de construcción y espacio de seguridad</h3>
+<ul style="margin:12px 0 0; padding-left:20px; font-size:15px; line-height:1.6">
+  <li style="margin-bottom:8px">El margen de seguridad mínimo alrededor del logotipo equivale a la altura de la letra “U” de LUMINA, en cualquier aplicación.</li>
+  <li style="margin-bottom:8px">Tamaño mínimo: <span style="font-family:'JetBrains Mono', monospace; font-size:13px">28 px</span> de alto en pantalla o <span style="font-family:'JetBrains Mono', monospace; font-size:13px">12 mm</span> en impresión; por debajo de eso, usar solo el símbolo ✦.</li>
+  <li style="margin-bottom:8px">No estirar, inclinar, rotar ni añadir sombras o efectos 3D al wordmark: la personalidad la pone la tipografía, no el efecto.</li>
+  <li style="margin-bottom:8px">No recolorear el logotipo fuera de las dos versiones autorizadas: Azul Grisáceo sobre fondo claro, o Blanco Cálido sobre fondo Azul Grisáceo/fotografía oscura.</li>
+  <li><strong style="font-weight:700">Fondos permitidos:</strong> Crema, Blanco Cálido, fotografía con contraste suficiente. <strong style="font-weight:700">Fondos prohibidos:</strong> patrones botánicos a más del 15% de opacidad, fotografías oscuras sin overlay, cualquier color de la paleta de acento a plena saturación detrás del wordmark.</li>
+</ul>
+
+<sc-if value="{{ showFigures }}" hint-placeholder-val="{{ true }}">
+<figure style="margin:24px 0 0; break-inside:avoid">
+  <img src="./assets/fig1.png" alt="Sistema de logotipo LUMINA" style="width:100%; display:block; border-radius:6px" />
+  <figcaption style="font-family:'JetBrains Mono', monospace; font-size:10px; line-height:1.6; letter-spacing:.04em; color:rgba(63,74,99,.7); margin-top:8px">Fig. 1 · Sistema de logotipo: principal, horizontal, chispa suelta y Hogar Studio (referencia interna del proyecto).</figcaption>
+</figure>
+</sc-if>
+
+<div style="break-before:page; padding-top:4px">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#C99579">Sección 02</div>
+  <h2 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:30px; line-height:1.15; margin:8px 0 0">Voz y tono</h2>
+  <div style="height:1px; background:rgba(63,74,99,.18); margin:18px 0 0"></div>
+</div>
+<p style="font-size:15px; line-height:1.65; margin:22px 0 0">Esta sección faltaba en la numeración del material de origen (se pasaba de 01 a 03) y hace falta: sin una voz definida, la paleta y la tipografía sostienen la mitad del carácter de la marca y la otra mitad se improvisa en cada texto. La voz de LUMINA es la de alguien que ha ordenado ya muchas casas: <strong style="font-weight:700">tranquila, concreta y sin promesas grandilocuentes</strong>.</p>
+<div style="display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:12px; margin-top:18px">
+  <div style="background:#FFFDF9; padding:16px 18px; border-radius:10px; break-inside:avoid">
+    <div style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:16px">Serena, no blanda</div>
+    <div style="font-size:13px; line-height:1.55; margin-top:6px">Frases cortas, verbos claros. La calma se transmite con precisión, no con adjetivos.</div>
+  </div>
+  <div style="background:#FFFDF9; padding:16px 18px; border-radius:10px; break-inside:avoid">
+    <div style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:16px">Cercana, no coloquial</div>
+    <div style="font-size:13px; line-height:1.55; margin-top:6px">Tuteo siempre. Sin jerga de interiorismo ni exclamaciones de catálogo.</div>
+  </div>
+  <div style="background:#FFFDF9; padding:16px 18px; border-radius:10px; break-inside:avoid">
+    <div style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:16px">Útil, no aspiracional</div>
+    <div style="font-size:13px; line-height:1.55; margin-top:6px">Se explica el siguiente paso. Nada de “transforma tu vida”: se transforma un espacio.</div>
+  </div>
+</div>
+<div style="display:flex; gap:12px; margin-top:14px; break-inside:avoid">
+  <div style="flex:1 1 0; min-width:0; background:rgba(165,173,142,.16); border-left:4px solid #A5AD8E; padding:14px 16px; border-radius:2px">
+    <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase">✓ Así se escribe</div>
+    <div style="font-size:13px; line-height:1.6; margin-top:8px">· “Elige los acabados antes de pedir el mobiliario.”<br />· “Tres decisiones y la cocina queda cerrada.”<br />· “Guardamos tus muestras de color en el proyecto.”</div>
+  </div>
+  <div style="flex:1 1 0; min-width:0; background:rgba(201,149,121,.16); border-left:4px solid #C99579; padding:14px 16px; border-radius:2px">
+    <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase">✕ Así no</div>
+    <div style="font-size:13px; line-height:1.6; margin-top:8px">· “¡Descubre el hogar de tus sueños!”<br />· “Soluciones integrales de habitabilidad.”<br />· “Un espacio que habla de ti.”</div>
+  </div>
+</div>
+<p style="font-size:15px; line-height:1.65; margin:16px 0 0"><strong style="font-weight:700">Longitudes de referencia:</strong> titular hasta 6 palabras; subtítulo una frase; párrafo máximo 4 líneas; microcopia de interfaz en imperativo y sin punto final. La firma manuscrita (Caveat) es el único lugar donde la voz se permite ser personal, y aparece como máximo una vez por documento.</p>
+
+<div style="break-before:page; padding-top:4px">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#C99579">Sección 03</div>
+  <h2 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:30px; line-height:1.15; margin:8px 0 0">Colores</h2>
+  <div style="height:1px; background:rgba(63,74,99,.18); margin:18px 0 0"></div>
+</div>
+<p style="font-size:15px; line-height:1.65; margin:22px 0 0">Siete colores, ni uno más: una base neutra cálida (Crema y Blanco Cálido), un color de identidad que hace de tinta en todo el sistema (Azul Grisáceo) y cuatro acentos con un trabajo específico cada uno (Salvia, Terracota, Rosa Empolvado, Dorado Chispa). El negro puro <span style="font-family:'JetBrains Mono', monospace; font-size:13px">#000000</span> queda fuera del sistema por completo: el Azul Grisáceo lo sustituye en todo texto, icono o línea que en otra marca sería negra. Es más cálido, mantiene el contraste y no pelea con la estética pastel.</p>
+
+<div style="display:flex; gap:8px; margin-top:18px; break-inside:avoid">
+  <div style="flex:1 1 0"><div style="height:56px; background:#F7F2EA; border:1px solid rgba(63,74,99,.18); border-radius:6px"></div><div style="font-family:'JetBrains Mono', monospace; font-size:9px; margin-top:6px; line-height:1.5">CREMA<br />#F7F2EA</div></div>
+  <div style="flex:1 1 0"><div style="height:56px; background:#FFFDF9; border:1px solid rgba(63,74,99,.18); border-radius:6px"></div><div style="font-family:'JetBrains Mono', monospace; font-size:9px; margin-top:6px; line-height:1.5">BLANCO<br />#FFFDF9</div></div>
+  <div style="flex:1 1 0"><div style="height:56px; background:#3F4A63; border-radius:6px"></div><div style="font-family:'JetBrains Mono', monospace; font-size:9px; margin-top:6px; line-height:1.5">AZUL GRIS.<br />#3F4A63</div></div>
+  <div style="flex:1 1 0"><div style="height:56px; background:#A5AD8E; border-radius:6px"></div><div style="font-family:'JetBrains Mono', monospace; font-size:9px; margin-top:6px; line-height:1.5">SALVIA<br />#A5AD8E</div></div>
+  <div style="flex:1 1 0"><div style="height:56px; background:#C99579; border-radius:6px"></div><div style="font-family:'JetBrains Mono', monospace; font-size:9px; margin-top:6px; line-height:1.5">TERRACOTA<br />#C99579</div></div>
+  <div style="flex:1 1 0"><div style="height:56px; background:#D9B5A2; border-radius:6px"></div><div style="font-family:'JetBrains Mono', monospace; font-size:9px; margin-top:6px; line-height:1.5">ROSA EMP.<br />#D9B5A2</div></div>
+  <div style="flex:1 1 0"><div style="height:56px; background:#C9AD78; border-radius:6px"></div><div style="font-family:'JetBrains Mono', monospace; font-size:9px; margin-top:6px; line-height:1.5">DORADO<br />#C9AD78</div></div>
+</div>
+
+<table style="width:100%; border-collapse:collapse; margin-top:20px; font-size:12.5px">
+  <thead>
+    <tr>
+      <th style="text-align:left; background:#3F4A63; color:#FFFDF9; font-weight:600; font-size:10px; letter-spacing:.12em; text-transform:uppercase; padding:9px 12px; width:20%">Color</th>
+      <th style="text-align:left; background:#3F4A63; color:#FFFDF9; font-weight:600; font-size:10px; letter-spacing:.12em; text-transform:uppercase; padding:9px 12px">Uso principal</th>
+      <th style="text-align:left; background:#3F4A63; color:#FFFDF9; font-weight:600; font-size:10px; letter-spacing:.12em; text-transform:uppercase; padding:9px 12px">Uso secundario</th>
+      <th style="text-align:left; background:#3F4A63; color:#FFFDF9; font-weight:600; font-size:10px; letter-spacing:.12em; text-transform:uppercase; padding:9px 12px; width:26%">No utilizar para</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background:#FFFDF9; padding:10px 12px; vertical-align:top; line-height:1.5"><strong style="font-weight:700">Crema</strong><br /><span style="font-family:'JetBrains Mono', monospace; font-size:10.5px">#F7F2EA · LUZ</span></td>
+      <td style="background:#FFFDF9; padding:10px 12px; vertical-align:top; line-height:1.5">Fondo principal de cualquier documento o pantalla.</td>
+      <td style="background:#FFFDF9; padding:10px 12px; vertical-align:top; line-height:1.5">Fondo de tarjetas sobre fotografía clara.</td>
+      <td style="background:#FFFDF9; padding:10px 12px; vertical-align:top; line-height:1.5">Texto sobre Blanco Cálido (contraste insuficiente).</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 12px; vertical-align:top; line-height:1.5"><strong style="font-weight:700">Blanco Cálido</strong><br /><span style="font-family:'JetBrains Mono', monospace; font-size:10.5px">#FFFDF9 · BASE</span></td>
+      <td style="padding:10px 12px; vertical-align:top; line-height:1.5">Tarjetas y zonas de contenido sobre fondo Crema.</td>
+      <td style="padding:10px 12px; vertical-align:top; line-height:1.5">Fondo de tablas y formularios.</td>
+      <td style="padding:10px 12px; vertical-align:top; line-height:1.5">Fondos de pantalla completa (queda plano sin la Crema debajo).</td>
+    </tr>
+    <tr>
+      <td style="background:#FFFDF9; padding:10px 12px; vertical-align:top; line-height:1.5"><strong style="font-weight:700">Azul Grisáceo</strong><br /><span style="font-family:'JetBrains Mono', monospace; font-size:10.5px">#3F4A63 · SERENIDAD</span></td>
+      <td style="background:#FFFDF9; padding:10px 12px; vertical-align:top; line-height:1.5">Texto principal, títulos y wordmark del logotipo.</td>
+      <td style="background:#FFFDF9; padding:10px 12px; vertical-align:top; line-height:1.5">Iconos de navegación, bordes sutiles, pies de página.</td>
+      <td style="background:#FFFDF9; padding:10px 12px; vertical-align:top; line-height:1.5">Bloques de fondo que superen el 40% de la página.</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 12px; vertical-align:top; line-height:1.5"><strong style="font-weight:700">Salvia</strong><br /><span style="font-family:'JetBrains Mono', monospace; font-size:10.5px">#A5AD8E · EQUILIBRIO</span></td>
+      <td style="padding:10px 12px; vertical-align:top; line-height:1.5">Acentos botánicos, badges de estado, tarjetas de proyecto.</td>
+      <td style="padding:10px 12px; vertical-align:top; line-height:1.5">Fondos orgánicos suaves, iconos de tarea completada.</td>
+      <td style="padding:10px 12px; vertical-align:top; line-height:1.5">Texto pequeño sobre fondo Crema: revisar siempre el contraste WCAG.</td>
+    </tr>
+    <tr>
+      <td style="background:#FFFDF9; padding:10px 12px; vertical-align:top; line-height:1.5"><strong style="font-weight:700">Terracota</strong><br /><span style="font-family:'JetBrains Mono', monospace; font-size:10.5px">#C99579 · ENERGÍA</span></td>
+      <td style="background:#FFFDF9; padding:10px 12px; vertical-align:top; line-height:1.5">Botones secundarios, avisos cálidos, acentos “by sunny”.</td>
+      <td style="background:#FFFDF9; padding:10px 12px; vertical-align:top; line-height:1.5">Iconos de reformas, llamadas a la acción, promociones.</td>
+      <td style="background:#FFFDF9; padding:10px 12px; vertical-align:top; line-height:1.5">Cuerpo de texto de un párrafo largo.</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 12px; vertical-align:top; line-height:1.5"><strong style="font-weight:700">Rosa Empolvado</strong><br /><span style="font-family:'JetBrains Mono', monospace; font-size:10.5px">#D9B5A2 · CALIDEZ</span></td>
+      <td style="padding:10px 12px; vertical-align:top; line-height:1.5">Formas orgánicas de fondo, ilustraciones complementarias.</td>
+      <td style="padding:10px 12px; vertical-align:top; line-height:1.5">Separadores visuales, etiquetas secundarias.</td>
+      <td style="padding:10px 12px; vertical-align:top; line-height:1.5">Elementos técnicos que requieran alta legibilidad.</td>
+    </tr>
+    <tr>
+      <td style="background:#FFFDF9; padding:10px 12px; vertical-align:top; line-height:1.5"><strong style="font-weight:700">Dorado Chispa</strong><br /><span style="font-family:'JetBrains Mono', monospace; font-size:10.5px">#C9AD78 · CHISPA</span></td>
+      <td style="background:#FFFDF9; padding:10px 12px; vertical-align:top; line-height:1.5">Símbolo ✦, iconos de ideas, detalles de marca premium.</td>
+      <td style="background:#FFFDF9; padding:10px 12px; vertical-align:top; line-height:1.5">Citas destacadas, marcas de agua, apliques decorativos.</td>
+      <td style="background:#FFFDF9; padding:10px 12px; vertical-align:top; line-height:1.5">Bloques grandes de texto.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:20px; margin:28px 0 0">Reglas de combinación</h3>
+<ul style="margin:12px 0 0; padding-left:20px; font-size:15px; line-height:1.6">
+  <li style="margin-bottom:8px"><strong style="font-weight:700">Base neutra siempre presente:</strong> Crema o Blanco Cálido ocupan como mínimo el 55-60% de cualquier composición. El color aquí orienta, no rellena.</li>
+  <li style="margin-bottom:8px"><strong style="font-weight:700">Máximo dos acentos por vista o página.</strong> Si Salvia domina, Terracota o Dorado Chispa apoyan; nunca los tres acentos cálidos a la vez compitiendo por atención.</li>
+  <li style="margin-bottom:8px">El Azul Grisáceo es el único color autorizado para texto de lectura larga; los acentos se reservan para títulos cortos, iconos, badges y detalles.</li>
+  <li style="margin-bottom:8px">Antes de dar por buena una combinación texto/fondo, comprobar el contraste WCAG AA —en concreto Salvia y Rosa Empolvado fallan con texto pequeño sobre Crema.</li>
+  <li>En Hogar Studio (producto), <strong style="font-weight:700">Salvia = “completado/avance”</strong> y <strong style="font-weight:700">Terracota = “prioridad/atención”</strong>. No se intercambian entre sí en ningún estado de interfaz.</li>
+</ul>
+
+<div style="break-before:page; padding-top:4px">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#C99579">Sección 04</div>
+  <h2 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:30px; line-height:1.15; margin:8px 0 0">Tipografía</h2>
+  <div style="height:1px; background:rgba(63,74,99,.18); margin:18px 0 0"></div>
+</div>
+<p style="font-size:15px; line-height:1.65; margin:22px 0 0">Tres fuentes, tres trabajos distintos, y una regla que no se negocia: nunca más de tres familias tipográficas activas en la misma pieza. En la práctica, el 95% de cualquier documento se resuelve solo con Fraunces + Manrope; JetBrains Mono entra únicamente cuando hay una razón funcional —una cota, un código, un dato técnico—, nunca por decoración.</p>
+
+<div style="display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:12px; margin-top:18px">
+  <div style="background:#FFFDF9; padding:18px; border-radius:10px; break-inside:avoid">
+    <div style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.16em; color:#C99579">FRAUNCES</div>
+    <div style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:32px; line-height:1.1; margin:10px 0 0">Lumina</div>
+    <div style="font-family:Fraunces, Georgia, serif; font-style:italic; font-size:13px; margin-top:6px; color:rgba(63,74,99,.8)">La chispa · la imaginación</div>
+    <div style="font-size:12.5px; line-height:1.55; margin-top:10px">Editorial, artesanal, con carácter. Solo para identidad y titulares: Logo, H1, H2. Nunca en párrafos.</div>
+  </div>
+  <div style="background:#FFFDF9; padding:18px; border-radius:10px; break-inside:avoid">
+    <div style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.16em; color:#C99579">MANROPE</div>
+    <div style="font-weight:700; font-size:24px; line-height:1.15; margin:10px 0 0">Organiza tu hogar</div>
+    <div style="font-size:13px; margin-top:6px; color:rgba(63,74,99,.8)">El orden · la claridad · la acción</div>
+    <div style="font-size:12.5px; line-height:1.55; margin-top:10px">Legible, contemporánea, neutra. Cuerpo de texto, navegación, botones, etiquetas: hace casi todo el trabajo.</div>
+  </div>
+  <div style="background:#FFFDF9; padding:18px; border-radius:10px; break-inside:avoid">
+    <div style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.16em; color:#C99579">JETBRAINS MONO</div>
+    <div style="font-family:'JetBrains Mono', monospace; font-weight:500; font-size:19px; line-height:1.2; margin:10px 0 0">80×80 cm<br />#3F4A63</div>
+    <div style="font-size:13px; margin-top:6px; color:rgba(63,74,99,.8)">Cotas · códigos · metadatos</div>
+    <div style="font-size:12.5px; line-height:1.55; margin-top:10px">Monoespaciada, técnica. Solo para badges, referencias, tablas de datos y medidas. Uso funcional, no ornamental.</div>
+  </div>
+</div>
+
+<h3 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:20px; margin:28px 0 0">Tabla de jerarquía</h3>
+<table style="width:100%; border-collapse:collapse; margin-top:14px; font-size:13px">
+  <thead>
+    <tr>
+      <th style="text-align:left; background:#3F4A63; color:#FFFDF9; font-weight:600; font-size:10px; letter-spacing:.12em; text-transform:uppercase; padding:9px 12px; width:34%">Uso</th>
+      <th style="text-align:left; background:#3F4A63; color:#FFFDF9; font-weight:600; font-size:10px; letter-spacing:.12em; text-transform:uppercase; padding:9px 12px">Fuente</th>
+      <th style="text-align:left; background:#3F4A63; color:#FFFDF9; font-weight:600; font-size:10px; letter-spacing:.12em; text-transform:uppercase; padding:9px 12px">Peso</th>
+      <th style="text-align:left; background:#3F4A63; color:#FFFDF9; font-weight:600; font-size:10px; letter-spacing:.12em; text-transform:uppercase; padding:9px 12px">Tamaño orientativo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="background:#FFFDF9; padding:8px 12px">Logo LUMINA</td><td style="background:#FFFDF9; padding:8px 12px">Fraunces</td><td style="background:#FFFDF9; padding:8px 12px">600 SemiBold</td><td style="background:#FFFDF9; padding:8px 12px; font-family:'JetBrains Mono', monospace; font-size:11.5px">28–36 pt</td></tr>
+    <tr><td style="padding:8px 12px">“by sunny”</td><td style="padding:8px 12px">Manrope</td><td style="padding:8px 12px">400–500</td><td style="padding:8px 12px; font-family:'JetBrains Mono', monospace; font-size:11.5px">11–13 pt</td></tr>
+    <tr><td style="background:#FFFDF9; padding:8px 12px">Hogar Studio</td><td style="background:#FFFDF9; padding:8px 12px">Manrope</td><td style="background:#FFFDF9; padding:8px 12px">700 Bold</td><td style="background:#FFFDF9; padding:8px 12px; font-family:'JetBrains Mono', monospace; font-size:11.5px">16–18 pt</td></tr>
+    <tr><td style="padding:8px 12px">Título / H1</td><td style="padding:8px 12px">Fraunces</td><td style="padding:8px 12px">600</td><td style="padding:8px 12px; font-family:'JetBrains Mono', monospace; font-size:11.5px">22–24 pt</td></tr>
+    <tr><td style="background:#FFFDF9; padding:8px 12px">H2</td><td style="background:#FFFDF9; padding:8px 12px">Fraunces</td><td style="background:#FFFDF9; padding:8px 12px">500–600</td><td style="background:#FFFDF9; padding:8px 12px; font-family:'JetBrains Mono', monospace; font-size:11.5px">17–19 pt</td></tr>
+    <tr><td style="padding:8px 12px">H3</td><td style="padding:8px 12px">Manrope</td><td style="padding:8px 12px">700</td><td style="padding:8px 12px; font-family:'JetBrains Mono', monospace; font-size:11.5px">13–15 pt</td></tr>
+    <tr><td style="background:#FFFDF9; padding:8px 12px">Texto normal</td><td style="background:#FFFDF9; padding:8px 12px">Manrope</td><td style="background:#FFFDF9; padding:8px 12px">400</td><td style="background:#FFFDF9; padding:8px 12px; font-family:'JetBrains Mono', monospace; font-size:11.5px">10,5–11,5 pt</td></tr>
+    <tr><td style="padding:8px 12px">Texto destacado</td><td style="padding:8px 12px">Manrope</td><td style="padding:8px 12px">500</td><td style="padding:8px 12px; font-family:'JetBrains Mono', monospace; font-size:11.5px">11–12 pt</td></tr>
+    <tr><td style="background:#FFFDF9; padding:8px 12px">Botones</td><td style="background:#FFFDF9; padding:8px 12px">Manrope</td><td style="background:#FFFDF9; padding:8px 12px">600–700</td><td style="background:#FFFDF9; padding:8px 12px; font-family:'JetBrains Mono', monospace; font-size:11.5px">10–11 pt</td></tr>
+    <tr><td style="padding:8px 12px">Etiquetas / categorías</td><td style="padding:8px 12px">Manrope</td><td style="padding:8px 12px">600</td><td style="padding:8px 12px; font-family:'JetBrains Mono', monospace; font-size:11.5px">9–10 pt</td></tr>
+    <tr><td style="background:#FFFDF9; padding:8px 12px">Datos / cotas / códigos</td><td style="background:#FFFDF9; padding:8px 12px">JetBrains Mono</td><td style="background:#FFFDF9; padding:8px 12px">400–500</td><td style="background:#FFFDF9; padding:8px 12px; font-family:'JetBrains Mono', monospace; font-size:11.5px">9–10 pt</td></tr>
+    <tr><td style="padding:8px 12px">Firma decorativa (excepcional)</td><td style="padding:8px 12px">Caveat</td><td style="padding:8px 12px">500</td><td style="padding:8px 12px; font-family:'JetBrains Mono', monospace; font-size:11.5px">14–16 pt</td></tr>
+  </tbody>
+</table>
+
+<h3 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:20px; margin:28px 0 0">Cómo se leen estas reglas en el día a día</h3>
+<ul style="margin:12px 0 0; padding-left:20px; font-size:15px; line-height:1.6">
+  <li style="margin-bottom:8px">Si dudas entre Fraunces o Manrope para un texto, pregúntate si alguien lo va a leer de corrido. Si la respuesta es sí, es Manrope.</li>
+  <li style="margin-bottom:8px">JetBrains Mono no es “la fuente de los números” en general: un precio en una tarjeta va en Manrope. JetBrains Mono es para datos técnicos verificables —medidas, referencias, códigos de color.</li>
+  <li>Caveat (manuscrita) no forma parte del logotipo ni de ningún encabezado. Es un recurso opcional para una firma personal o una nota manuscrita, y aparece como máximo una vez por documento: <span style="font-family:Caveat, cursive; font-size:20px; color:#C99579">— sunny</span></li>
+</ul>
+
+<div style="break-before:page; padding-top:4px">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#C99579">Sección 05</div>
+  <h2 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:30px; line-height:1.15; margin:8px 0 0">Elementos visuales</h2>
+  <div style="height:1px; background:rgba(63,74,99,.18); margin:18px 0 0"></div>
+</div>
+<p style="font-size:15px; line-height:1.65; margin:22px 0 0">Más allá del logotipo, LUMINA se apoya en un vocabulario reducido de formas: la chispa, curvas orgánicas, un motivo botánico puntual y texturas suaves. Todos comparten la misma regla, no escrita en el material original pero evidente en cuanto se mira: <strong style="font-weight:700">son acentos, nunca protagonistas</strong>. Si un elemento visual compite con el contenido por la atención, sobra.</p>
+
+<h3 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:20px; margin:24px 0 0">Chispa (✦)</h3>
+<p style="font-size:15px; line-height:1.65; margin:10px 0 0">Ya descrita en la sección 01 como símbolo de marca. Aquí se usa además como micro-recurso gráfico: separador de sección (línea fina + chispa + línea fina), viñeta de lista en documentos editoriales y acento sobre citas. Nunca a más de un tamaño destacado por página.</p>
+
+<h3 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:20px; margin:24px 0 0">Formas orgánicas</h3>
+<p style="font-size:15px; line-height:1.65; margin:10px 0 0">Manchas y curvas de bordes redondeados, sin esquinas rectas, en tonos Rosa Empolvado, Crema o Salvia a baja saturación. Se usan como fondo decorativo en esquinas de portadas y membretes —nunca detrás de bloques de texto extensos, donde reducirían la legibilidad.</p>
+<ul style="margin:10px 0 0; padding-left:20px; font-size:15px; line-height:1.6">
+  <li style="margin-bottom:8px"><strong style="font-weight:700">Portadas y cabeceras de documento:</strong> una o dos formas por esquina, máximo el 20% de la superficie.</li>
+  <li><strong style="font-weight:700">Tarjetas de producto en Hogar Studio:</strong> forma orgánica sutil como fondo de icono, no de todo el módulo.</li>
+</ul>
+
+<h3 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:20px; margin:24px 0 0">Motivo botánico (hojas)</h3>
+<p style="font-size:15px; line-height:1.65; margin:10px 0 0">Una rama u hoja lineal, dibujada en trazo fino, es el acento botánico de la marca. Aparece junto al logotipo en composiciones especiales, como ilustración de apoyo en las esquinas de fondos documentales y como parte de la Chispa Botánica. No se usa como patrón repetido a gran escala: eso es del terreno de las texturas, no de la ilustración de acento.</p>
+
+<h3 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:20px; margin:24px 0 0">Texturas y fondos</h3>
+<ul style="margin:10px 0 0; padding-left:20px; font-size:15px; line-height:1.6">
+  <li style="margin-bottom:8px"><strong style="font-weight:700">Fondo documental pastel</strong> — Base neutra, sin patrón, en Crema o Blanco Cálido. El 90% de las páginas de texto deberían usar este fondo.</li>
+  <li style="margin-bottom:8px"><strong style="font-weight:700">Fondo portada · curvas orgánicas</strong> — Combina formas orgánicas de fondo con el logotipo o el símbolo suelto. Reservado a portadas y separadores de sección.</li>
+  <li><strong style="font-weight:700">Patrón botánico suave</strong> — Motivo botánico repetido a opacidad muy baja (10-15%). Solo en separadores de capítulo o contraportadas; jamás detrás de texto de lectura.</li>
+</ul>
+
+<div style="display:flex; gap:12px; margin-top:18px; break-inside:avoid">
+  <div style="flex:1 1 0; min-width:0; background:rgba(165,173,142,.16); border-left:4px solid #A5AD8E; padding:14px 16px; border-radius:2px">
+    <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase">✓ Hacer</div>
+    <div style="font-size:13px; line-height:1.6; margin-top:8px">· Reservar formas y texturas a portadas, separadores y esquinas.<br />· Mantener la opacidad de cualquier patrón por debajo del 15% si hay texto cerca.<br />· Usar un único acento gráfico dominante por composición.</div>
+  </div>
+  <div style="flex:1 1 0; min-width:0; background:rgba(201,149,121,.16); border-left:4px solid #C99579; padding:14px 16px; border-radius:2px">
+    <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase">✕ Evitar</div>
+    <div style="font-size:13px; line-height:1.6; margin-top:8px">· Patrones botánicos a plena opacidad detrás de párrafos.<br />· Mezclar chispa + formas orgánicas + textura botánica en la misma esquina.<br />· Formas orgánicas en colores saturados fuera de la paleta.</div>
+  </div>
+</div>
+
+<div style="break-before:page; padding-top:4px">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#C99579">Sección 06</div>
+  <h2 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:30px; line-height:1.15; margin:8px 0 0">Fotografía</h2>
+  <div style="height:1px; background:rgba(63,74,99,.18); margin:18px 0 0"></div>
+</div>
+<p style="font-size:15px; line-height:1.65; margin:22px 0 0">La fotografía de LUMINA y Hogar Studio no vende un estilo de vida aspiracional de revista: <strong style="font-weight:700">documenta el proceso real</strong> de diseñar y organizar un hogar. Dos familias de imagen cubren todos los casos: bodegones de escritorio y ambientes interiores cálidos.</p>
+
+<h3 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:20px; margin:24px 0 0">Qué fotografiar</h3>
+<ul style="margin:10px 0 0; padding-left:20px; font-size:15px; line-height:1.6">
+  <li style="margin-bottom:8px"><strong style="font-weight:700">Bodegones de proyecto</strong> — Composiciones de mesa de trabajo con planos, maqueta de casa de madera, cuaderno, muestras de color, taza de café, planta en maceta. Es la imagen “de marca” por excelencia: transmite proceso creativo y orden a la vez.</li>
+  <li style="margin-bottom:8px"><strong style="font-weight:700">Interiores cálidos</strong> — Salones y estancias reales con luz natural, mobiliario neutro, plantas y textiles en la paleta de marca. Documentan el resultado, no el proceso.</li>
+  <li><strong style="font-weight:700">Materiales y texturas naturales</strong> — Madera, lino, cerámica, terracota: primeros planos que refuerzan la sensación táctil y artesanal de la marca.</li>
+</ul>
+
+<h3 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:20px; margin:24px 0 0">Cómo debe verse</h3>
+<div style="display:flex; gap:12px; margin-top:12px; break-inside:avoid">
+  <div style="flex:1 1 0; min-width:0; background:rgba(165,173,142,.16); border-left:4px solid #A5AD8E; padding:14px 16px; border-radius:2px">
+    <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase">✓ Buscar</div>
+    <div style="font-size:13px; line-height:1.6; margin-top:8px">· Luz natural cálida, nunca fluorescente o azulada.<br />· Composición despejada, con espacio para respirar.<br />· Paleta coherente con la marca dentro de la propia foto.<br />· Objetos y texturas reales: madera, lino, cerámica, papel.</div>
+  </div>
+  <div style="flex:1 1 0; min-width:0; background:rgba(201,149,121,.16); border-left:4px solid #C99579; padding:14px 16px; border-radius:2px">
+    <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase">✕ Evitar</div>
+    <div style="font-size:13px; line-height:1.6; margin-top:8px">· Fotografía de stock corporativo (oficinas, apretones de manos).<br />· Luz fría, neón o flash directo con sombras duras.<br />· Composiciones recargadas o desordenadas.<br />· Colores saturados fuera de la paleta de marca.</div>
+  </div>
+</div>
+
+<sc-if value="{{ showFigures }}" hint-placeholder-val="{{ true }}">
+<figure style="margin:22px 0 0; break-inside:avoid; display:flex; gap:16px; align-items:flex-start">
+  <img src="./assets/fig2.png" alt="Membrete Hogar Studio" style="width:44%; display:block; border-radius:6px; border:1px solid rgba(63,74,99,.12)" />
+  <figcaption style="font-family:'JetBrains Mono', monospace; font-size:10px; line-height:1.7; letter-spacing:.04em; color:rgba(63,74,99,.7); flex:1 1 0">Fig. 2 · Membrete Hogar Studio con bodegón de esquina: planos, maceta, cuaderno y maqueta de casa (referencia interna).<br /><br />La fotografía entra recortada en las esquinas, nunca a sangre completa detrás del texto, y la mancha orgánica hace de transición entre foto y papel.</figcaption>
+</figure>
+</sc-if>
+
+<div style="break-before:page; padding-top:4px">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#C99579">Sección 07</div>
+  <h2 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:30px; line-height:1.15; margin:8px 0 0">Ilustración</h2>
+  <div style="height:1px; background:rgba(63,74,99,.18); margin:18px 0 0"></div>
+</div>
+<p style="font-size:15px; line-height:1.65; margin:22px 0 0">El material de referencia mezclaba, sin decirlo del todo, dos registros de ilustración distintos. Aquí quedan separados porque cumplen funciones distintas y no deberían convivir en la misma pieza.</p>
+
+<h3 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:20px; margin:24px 0 0">Registro 1 · Iconografía 3D pastel (producto)</h3>
+<p style="font-size:15px; line-height:1.65; margin:10px 0 0">Renders suaves en 3D, con luz cenital suave desde arriba a la izquierda, bordes redondeados, materiales mate (nunca brillantes o plásticos) y paleta limitada a los siete colores de marca. Es el lenguaje de la interfaz de Hogar Studio: decoración, reformas, organización, ideas, planos, compras, tareas, archivos, calendario.</p>
+<div style="display:flex; gap:12px; margin-top:12px; break-inside:avoid">
+  <div style="flex:1 1 0; min-width:0; background:rgba(165,173,142,.16); border-left:4px solid #A5AD8E; padding:14px 16px; border-radius:2px">
+    <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase">✓ Mantener</div>
+    <div style="font-size:13px; line-height:1.6; margin-top:8px">· Luz suave y consistente en todos los iconos de un mismo set.<br />· Formas redondeadas, sin aristas vivas.<br />· Materiales mate dentro de la paleta de marca.</div>
+  </div>
+  <div style="flex:1 1 0; min-width:0; background:rgba(201,149,121,.16); border-left:4px solid #C99579; padding:14px 16px; border-radius:2px">
+    <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase">✕ Evitar</div>
+    <div style="font-size:13px; line-height:1.6; margin-top:8px">· Iconos planos tipo clipart corporativo.<br />· Gradientes neón o efectos de plástico brillante.<br />· Mezclar iconos 3D con iconos de línea en el mismo set.</div>
+  </div>
+</div>
+
+<h3 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:20px; margin:24px 0 0">Registro 2 · Línea botánica (editorial)</h3>
+<p style="font-size:15px; line-height:1.65; margin:10px 0 0">Trazo fino, monocromo (Azul Grisáceo o Dorado Chispa), una sola hoja o rama por composición. Se usa como acento en documentos, portadas y separadores —nunca en la interfaz de producto, que pertenece al registro 3D. Mezclar ambos registros en la misma pieza es la forma más rápida de que el sistema deje de parecer un sistema.</p>
+
+<sc-if value="{{ showFigures }}" hint-placeholder-val="{{ true }}">
+<figure style="margin:22px 0 0; break-inside:avoid">
+  <img src="./assets/fig3.png" alt="Set de iconos 3D pastel de Hogar Studio" style="width:100%; display:block; border-radius:6px" />
+  <figcaption style="font-family:'JetBrains Mono', monospace; font-size:10px; line-height:1.6; letter-spacing:.04em; color:rgba(63,74,99,.7); margin-top:8px">Fig. 3 · Set de iconos 3D pastel de Hogar Studio: decoración, reformas, organización, ideas, planos, compras, tareas, archivos (referencia interna).</figcaption>
+</figure>
+</sc-if>
+
+<div style="break-before:page; padding-top:4px">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#C99579">Sección 08</div>
+  <h2 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:30px; line-height:1.15; margin:8px 0 0">Componentes</h2>
+  <div style="height:1px; background:rgba(63,74,99,.18); margin:18px 0 0"></div>
+</div>
+<p style="font-size:15px; line-height:1.65; margin:22px 0 0">Doce piezas cubren prácticamente cualquier documento o pantalla de LUMINA y Hogar Studio. No son plantillas cerradas sino reglas de construcción con un ejemplo aplicado; el criterio para añadir un componente nuevo al sistema es que se repita en al menos tres documentos distintos —si no, es un caso puntual y no merece entrar aquí.</p>
+
+<div style="margin-top:20px; break-inside:avoid">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#C99579">Componente 1 · Título y subtítulo</div>
+  <div style="background:#FFFDF9; border-radius:10px; padding:22px 24px; margin-top:8px">
+    <div style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:25px; line-height:1.15">Transforma tu espacio con calma</div>
+    <div style="font-weight:500; font-size:14px; color:#C99579; margin-top:8px">Guía paso a paso para la selección de materiales y distribución.</div>
+  </div>
+  <div style="font-size:12.5px; line-height:1.55; margin-top:8px; color:rgba(63,74,99,.85)">Título en Fraunces 600, subtítulo en Manrope 500 en Terracota. El subtítulo nunca repite literalmente el título: añade contexto o la acción siguiente.</div>
+</div>
+
+<div style="margin-top:22px; break-inside:avoid">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#C99579">Componente 2 · Párrafo base</div>
+  <div style="background:#FFFDF9; border-radius:10px; padding:22px 24px; margin-top:8px">
+    <p style="font-size:14.5px; line-height:1.5; margin:0; max-width:60ch">El diseño consciente no busca recargar las estancias, sino despejar la mente. A través de la iluminación natural y los materiales nobles, creamos hogares funcionales que celebran lo esencial.</p>
+  </div>
+  <div style="font-size:12.5px; line-height:1.55; margin-top:8px; color:rgba(63,74,99,.85)">Manrope 400, interlineado generoso (1.4-1.5). Máximo 75 caracteres por línea para no perder la sensación de calma visual.</div>
+</div>
+
+<div style="margin-top:22px; break-inside:avoid">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#C99579">Componente 3 · Tarjeta (card)</div>
+  <div style="background:#FFFDF9; border-radius:10px; padding:20px; margin-top:8px">
+    <div style="background:#F7F2EA; border-radius:12px; padding:18px 20px">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:12px">
+        <span style="font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:.1em; background:#A5AD8E; color:#FFFDF9; padding:4px 9px; border-radius:999px">PROYECTO ACTIVO</span>
+        <span style="font-family:'JetBrains Mono', monospace; font-size:9.5px; color:rgba(63,74,99,.7)">✦ Hogar Studio</span>
+      </div>
+      <div style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:19px; margin-top:12px">Remodelación cocina Salvia</div>
+      <div style="font-size:13px; line-height:1.55; margin-top:6px">Selección de acabados mate, madera clara y detalles cerámicos cálidos.</div>
+    </div>
+  </div>
+  <div style="font-size:12.5px; line-height:1.55; margin-top:8px; color:rgba(63,74,99,.85)">Fondo Crema sobre Blanco Cálido, esquinas redondeadas, etiqueta de estado a la izquierda y firma de marca a la derecha.</div>
+</div>
+
+<div style="margin-top:22px; break-inside:avoid">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#C99579">Componente 4 · Caja de cita</div>
+  <div style="background:rgba(217,181,162,.28); border-radius:10px; padding:26px 24px; margin-top:8px; text-align:center">
+    <div style="font-family:Fraunces, Georgia, serif; font-size:18px; color:#C9AD78">✦</div>
+    <div style="font-family:Fraunces, Georgia, serif; font-style:italic; font-size:20px; line-height:1.35; margin-top:8px">“La luz siempre encuentra un camino para inspirar.”</div>
+    <div style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.14em; margin-top:12px; color:rgba(63,74,99,.8)">— LUMINA INSPIRATIONS</div>
+  </div>
+  <div style="font-size:12.5px; line-height:1.55; margin-top:8px; color:rgba(63,74,99,.85)">Fondo Rosa Empolvado al 20% de opacidad, texto centrado en Fraunces cursiva, atribución en JetBrains Mono.</div>
+</div>
+
+<div style="margin-top:22px; break-inside:avoid">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#C99579">Componente 5 · Caja de aviso (alert)</div>
+  <div style="background:rgba(165,173,142,.18); border-left:5px solid #A5AD8E; padding:16px 18px; margin-top:8px; border-radius:2px; font-size:14px; line-height:1.55">
+    <span style="color:#C9AD78">✦</span> <strong style="font-weight:700">Nota de diseño:</strong> asegura mantener un margen libre equivalente a la altura de la letra “U” alrededor del logotipo.
+  </div>
+  <div style="font-size:12.5px; line-height:1.55; margin-top:8px; color:rgba(63,74,99,.85)">Borde izquierdo grueso en Salvia, fondo Salvia al 15%. Se reserva para advertencias de uso de marca, nunca para errores críticos de producto (esos usan un color de alerta específico fuera de esta paleta).</div>
+</div>
+
+<div style="margin-top:22px; break-inside:avoid">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#C99579">Componente 6 · Separador decorativo</div>
+  <div style="background:#FFFDF9; border-radius:10px; padding:22px 24px; margin-top:8px; display:flex; align-items:center; gap:14px">
+    <div style="flex:1 1 0; height:1px; background:rgba(63,74,99,.2)"></div>
+    <div style="font-family:Fraunces, Georgia, serif; font-size:15px; color:#C9AD78">✦</div>
+    <div style="flex:1 1 0; height:1px; background:rgba(63,74,99,.2)"></div>
+  </div>
+  <div style="font-size:12.5px; line-height:1.55; margin-top:8px; color:rgba(63,74,99,.85)">Línea fina en Azul Grisáceo al 20% de opacidad, interrumpida por la chispa en Dorado. Marca el cambio de sección dentro de un mismo documento.</div>
+</div>
+
+<div style="margin-top:22px; break-inside:avoid">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#C99579">Componente 7 · Etiquetas (badges)</div>
+  <div style="background:#FFFDF9; border-radius:10px; padding:22px 24px; margin-top:8px; display:flex; gap:10px; flex-wrap:wrap">
+    <span style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.1em; background:#A5AD8E; color:#FFFDF9; padding:6px 13px; border-radius:999px">REFORMA</span>
+    <span style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.1em; background:#C99579; color:#FFFDF9; padding:6px 13px; border-radius:999px">DECORACIÓN</span>
+    <span style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.1em; background:#F7F2EA; color:#3F4A63; border:1px solid rgba(63,74,99,.25); padding:5px 12px; border-radius:999px">TAREA PENDIENTE</span>
+  </div>
+  <div style="font-size:12.5px; line-height:1.55; margin-top:8px; color:rgba(63,74,99,.85)">Mayúsculas, JetBrains Mono, siempre en cápsula. El color de fondo comunica la categoría (Salvia, Terracota) o el estado neutro (Crema con borde).</div>
+</div>
+
+<div style="margin-top:22px; break-inside:avoid">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#C99579">Componente 8 · Botones de acción</div>
+  <div style="background:#FFFDF9; border-radius:10px; padding:22px 24px; margin-top:8px; display:flex; gap:12px; flex-wrap:wrap">
+    <span style="font-weight:700; font-size:11.5px; letter-spacing:.08em; background:#3F4A63; color:#FFFDF9; padding:11px 22px; border-radius:8px">PRIMARIO</span>
+    <span style="font-weight:700; font-size:11.5px; letter-spacing:.08em; background:#A5AD8E; color:#FFFDF9; padding:11px 22px; border-radius:8px">SECUNDARIO</span>
+    <span style="font-weight:700; font-size:11.5px; letter-spacing:.08em; color:#3F4A63; border:1.5px solid #3F4A63; padding:9.5px 22px; border-radius:8px">OUTLINE</span>
+  </div>
+  <div style="font-size:12.5px; line-height:1.55; margin-top:8px; color:rgba(63,74,99,.85)">Primario en Azul Grisáceo para la acción principal de la pantalla; Secundario en Salvia para acciones de apoyo; Outline para acciones reversibles o de menor peso. Nunca más de un botón primario visible a la vez.</div>
+</div>
+
+<div style="margin-top:22px; break-inside:avoid">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#C99579">Componente 9 · Ficha técnica modular</div>
+  <div style="background:#F7F2EA; border:1px solid rgba(63,74,99,.14); border-radius:10px; padding:18px 20px; margin-top:8px">
+    <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.06em; padding-bottom:12px; border-bottom:1px solid rgba(63,74,99,.15)">
+      <span>REF_PROYECTO: #LUM-2026</span><span>ESTADO: APROBADO</span>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; margin-top:14px">
+      <div><div style="font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:.12em; color:rgba(63,74,99,.65)">SUPERFICIE</div><div style="font-weight:600; font-size:14px; margin-top:4px">85 m² útiles</div></div>
+      <div><div style="font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:.12em; color:rgba(63,74,99,.65)">PALETA SUGERIDA</div><div style="font-weight:600; font-size:14px; margin-top:4px">Crema, Salvia y Terracota</div></div>
+      <div><div style="font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:.12em; color:rgba(63,74,99,.65)">TIEMPO ESTIMADO</div><div style="font-weight:600; font-size:14px; margin-top:4px">4 semanas</div></div>
+    </div>
+  </div>
+  <div style="font-size:12.5px; line-height:1.55; margin-top:8px; color:rgba(63,74,99,.85)">Fondo Crema, cabecera con referencia y estado, cuerpo en columnas de datos breves. Es el componente que sostiene las fichas de proyecto de Hogar Studio.</div>
+</div>
+
+<div style="margin-top:22px; break-inside:avoid">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#C99579">Componente 10 · Tabla de datos</div>
+  <table style="width:100%; border-collapse:collapse; margin-top:8px; font-size:13px">
+    <thead>
+      <tr>
+        <th style="text-align:left; background:#3F4A63; color:#FFFDF9; font-weight:600; font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; padding:9px 12px">Categoría</th>
+        <th style="text-align:left; background:#3F4A63; color:#FFFDF9; font-weight:600; font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; padding:9px 12px">Material / acabado</th>
+        <th style="text-align:left; background:#3F4A63; color:#FFFDF9; font-weight:600; font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; padding:9px 12px">Ubicación</th>
+        <th style="text-align:left; background:#3F4A63; color:#FFFDF9; font-weight:600; font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; padding:9px 12px; width:8%">OK</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="background:#FFFDF9; padding:9px 12px">Pavimento</td><td style="background:#FFFDF9; padding:9px 12px">Madera de roble clara</td><td style="background:#FFFDF9; padding:9px 12px">Salón y pasillos</td><td style="background:#FFFDF9; padding:9px 12px; color:#A5AD8E; font-weight:700">✓</td></tr>
+      <tr><td style="padding:9px 12px">Pintura</td><td style="padding:9px 12px">Mate Crema <span style="font-family:'JetBrains Mono', monospace; font-size:11.5px">#F7F2EA</span></td><td style="padding:9px 12px">Toda la vivienda</td><td style="padding:9px 12px; color:#A5AD8E; font-weight:700">✓</td></tr>
+    </tbody>
+  </table>
+  <div style="font-size:12.5px; line-height:1.55; margin-top:8px; color:rgba(63,74,99,.85)">Cabecera en Azul Grisáceo con texto Blanco Cálido; filas alternando Blanco Cálido y Crema para facilitar el escaneo sin usar líneas de rejilla pesadas.</div>
+</div>
+
+<div style="margin-top:22px; break-inside:avoid">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#C99579">Componente 11 · Estructura de portada</div>
+  <div style="background:#F7F2EA; border:1px solid rgba(63,74,99,.14); border-radius:10px; padding:34px 24px; margin-top:8px; text-align:center">
+    <div style="font-family:Fraunces, Georgia, serif; font-size:22px; color:#C9AD78">✦</div>
+    <div style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:26px; margin-top:12px">Nombre del proyecto</div>
+    <div style="font-weight:500; font-size:13.5px; color:#C99579; margin-top:7px">Ficha técnica · Hogar Studio</div>
+    <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.1em; margin-top:22px; color:rgba(63,74,99,.7)">REF #LUM-2026 · SEPTIEMBRE 2026</div>
+  </div>
+  <ul style="margin:10px 0 0; padding-left:20px; font-size:12.5px; line-height:1.55; color:rgba(63,74,99,.85)">
+    <li style="margin-bottom:5px">Chispa centrada arriba, título en Fraunces, subtítulo de contexto en Terracota, referencia técnica en JetBrains Mono al pie. Fondo Crema o forma orgánica sutil en una esquina.</li>
+    <li>El logotipo completo (con “by sunny”) solo aparece en portadas de comunicación de marca; las fichas de proyecto de Hogar Studio usan el isotipo casa-hoja.</li>
+  </ul>
+</div>
+
+<div style="margin-top:22px; break-inside:avoid">
+  <div style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:#C99579">Componente 12 · Pie de página</div>
+  <div style="background:#FFFDF9; border-radius:10px; padding:18px 22px; margin-top:8px; display:flex; justify-content:space-between; font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.06em; color:rgba(63,74,99,.65)">
+    <span>✦ LUMINA · Hogar Studio</span><span>Página 1 de 8</span>
+  </div>
+  <div style="font-size:12.5px; line-height:1.55; margin-top:8px; color:rgba(63,74,99,.85)">Firma compuesta Lumina + Hogar Studio a la izquierda, numeración a la derecha, todo en JetBrains Mono a bajo contraste. Aparece en todo documento de más de una página; se omite en portadas.</div>
+</div>
+
+<div slot="footer" style="display:flex; justify-content:space-between; align-items:center; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:.08em; color:rgba(63,74,99,.6); padding-top:10px; border-top:1px solid rgba(63,74,99,.14)">
+  <span>✦ LUMINA · {{ footerLabel }}</span>
+  <span>Propuesta 1.0 · Septiembre 2026</span>
+</div>
+
+</doc-page>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showEditorNote&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contenido&quot;},&quot;showFigures&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contenido&quot;},&quot;footerLabel&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Brand &amp; Design System&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contenido&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showEditorNote: this.props.showEditorNote ?? true,
+      showFigures: this.props.showFigures ?? true,
+      footerLabel: this.props.footerLabel ?? "Brand & Design System",
+    };
+  }
+}
+</script>
+</body>
+</html>

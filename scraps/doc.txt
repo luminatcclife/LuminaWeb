@@ -1,0 +1,322 @@
+✦
+LUMINA
+by sunny
+BRAND & DESIGN SYSTEM
+Propuesta de manual · versión alterna 1.0
+Diseña. Organiza. Transforma tu hogar.
+01 ADN DE MARCA Y LOGOTIPO · 03 COLORES · 04 TIPOGRAFÍA
+05 ELEMENTOS VISUALES · 06 FOTOGRAFÍA · 07 ILUSTRACIÓN · 08 COMPONENTES
+NOTA DEL EDITOR DE MARCA
+{Heading1} Por qué esta es una propuesta “distinta”
+Este documento no repite tal cual las notas de trabajo que ya existen en la carpeta del proyecto (los PDF de la conversación de Gemini, el HTML interactivo y el análisis de plantillas). Las he leído todas, y en varios puntos había opciones abiertas o contradicciones menores que aquí se cierran con un criterio único, para que el manual sirva de referencia final y no de lluvia de ideas. Los cambios de criterio más relevantes:
+{ListParagraph} Jerarquía tipográfica cerrada — Fraunces se reserva para identidad y titulares (Logo, H1, H2). Nunca para párrafos largos: aporta carácter, no legibilidad de lectura continua.
+{ListParagraph} Una sola versión del subtítulo — “by sunny” se resuelve en Manrope, no en manuscrita. La manuscrita (Caveat) queda como recurso decorativo excepcional —firmas, notas a mano—, nunca como parte fija del logotipo.
+{ListParagraph} Regla de las 3 fuentes — Máximo 3 familias tipográficas activas en cualquier pieza. Fraunces + Manrope cubren el 95% de los casos; JetBrains Mono entra solo cuando hay una razón funcional (cotas, códigos, datos).
+{ListParagraph} Cero negro puro — En ningún soporte de Lumina o Hogar Studio se usa negro puro (#000000). El azul grisáceo #3F4A63 hace de “tinta” en todo el sistema: es más cálido y coherente con la paleta pastel.
+{ListParagraph} Ilustración con dos capas, no una — Se distinguen dos registros que en el material de origen a veces se mezclaban: ilustración 3D pastel (para iconografía de producto, Hogar Studio) e ilustración lineal botánica (para acentos editoriales en documentos). Ver sección 07.
+Si alguno de estos cinco criterios no encaja con lo que tenías en mente, dímelo directamente: son decisiones de diseño, no dogmas, y se pueden reabrir. Pero si no se cierran, el sistema no funciona como sistema —vuelve a ser una carpeta de ideas sueltas, y para eso ya tenías los PDF de Gemini.
+SECCIÓN 01
+{Heading1} ADN de marca & Logotipo
+{Heading2} Qué es LUMINA
+LUMINA es la marca madre; “by sunny” es la firma personal detrás de ella; Hogar Studio es el producto en el que esa marca se pone a trabajar. LUMINA no necesita explicar qué hace —el nombre ya carga una connotación emocional fuerte—, así que su función es sostener un universo visual construido alrededor de la luz: la chispa que enciende una idea antes de que se convierta en un proyecto de organización o reforma del hogar.
+Territorio de marca: luz · creatividad · hogar · ideas · transformación · calma · belleza funcional. “A pesar de todo” se conserva como concepto interno —el espíritu con el que se afrontan los proyectos—, pero no se usa como eslogan comercial: tiene demasiada personalidad para gastarla debajo de un logotipo. El eslogan público es más simple y explica el producto en cinco palabras:
+“Diseña. Organiza. Transforma tu hogar.”
+{Heading2} Los cuatro pilares de experiencia
+Rigen cualquier decisión gráfica o tipográfica, desde una portada de dossier hasta un icono de la app de Hogar Studio.
+01
+Calma visual
+Entornos limpios, paleta desaturada y respiración tipográfica amplia.
+02
+Foco atencional
+Jerarquía clara que guía el ojo sin saturar ni generar fatiga visual.
+03
+Baja fricción cognitiva
+Módulos ordenados, tablas intuitivas, iconos reconocibles al instante.
+04
+Diseño con propósito
+Cada color, forma o bloque cumple una función comunicativa concreta.
+{Heading2} El símbolo de la chispa (✦)
+La chispa representa el destello de una idea y el toque humano detrás de cada proyecto. Sustituye al punto de la “I” en LUMINA y funciona también como recurso independiente —favicon, sello de documentos, icono de app—. Existen cuatro variaciones, cada una con una intención de uso distinta y ninguna intercambiable con las demás:
+{ListParagraph} Chispa Clásica — estrella estilizada de cuatro puntas en Dorado Chispa #C9AD78. Encabezados principales, separadores de sección, acento sobre citas.
+{ListParagraph} Chispa Botánica — la chispa se funde con una hoja en Salvia #A5AD8E y Terracota #C99579. Portadas de dossiers de jardinería, reformas orgánicas y decoración.
+{ListParagraph} Monograma L — insignia circular con la letra “L”. Firmas de autoría, marcas de agua sobre imágenes de portada, isotipo para redes sociales.
+{ListParagraph} Chispa Hogar Studio — la chispa se integra en el tejado de la casa-hoja de Hogar Studio. Co-branding, fichas de gestión de reformas, checklists y planos.
+{Heading2} Logotipo: versiones y usos
+VERSIÓN
+USO PRINCIPAL
+NO USAR PARA
+Lumina principal
+Vertical, con la chispa en el punto de la “I”. Portadas, sellos, perfil social.
+Cabeceras horizontales estrechas.
+Lumina horizontal
+Con “by sunny” alineado debajo o al lado. Membretes, pies de página, firmas de documento.
+Espacios cuadrados o verticales.
+Símbolo suelto ✦
+Chispa aislada, cualquier variación. Favicon, icono de app, marca de agua, viñetas.
+Como logotipo principal en portadas oficiales.
+Hogar Studio
+Isotipo casa-hoja + wordmark “Hogar Studio”. Producto, checklists, fichas de proyecto.
+Comunicación que hable de LUMINA como marca madre.
+Lumina + Hogar Studio
+Firma compuesta de co-branding. Pie de página del producto, cierre de informes.
+Como lockup único sin espacio de respiración entre ambos.
+Reglas de construcción y espacio de seguridad
+{ListParagraph} El margen de seguridad mínimo alrededor del logotipo equivale a la altura de la letra “U” de LUMINA, en cualquier aplicación.
+{ListParagraph} Tamaño mínimo: 28 px de alto en pantalla o 12 mm en impresión; por debajo de eso, usar solo el símbolo ✦.
+{ListParagraph} No estirar, inclinar, rotar ni añadir sombras o efectos 3D al wordmark: la personalidad la pone la tipografía, no el efecto.
+{ListParagraph} No recolorear el logotipo fuera de las dos versiones autorizadas: Azul Grisáceo sobre fondo claro, o Blanco Cálido sobre fondo Azul Grisáceo/fotografía oscura.
+{ListParagraph} Fondos permitidos: Crema, Blanco Cálido, fotografía con contraste suficiente. Fondos prohibidos: patrones botánicos a más del 15% de opacidad, fotografías oscuras sin overlay, cualquier color de la paleta de acento (Terracota, Rosa, Salvia) a plena saturación detrás del wordmark.
+[IMAGE]
+Fig. 1 · Sistema de logotipo: principal, horizontal, chispa suelta y Hogar Studio (referencia interna del proyecto)
+SECCIÓN 03
+{Heading1} Colores
+Siete colores, ni uno más: una base neutra cálida (Crema y Blanco Cálido), un color de identidad que hace de tinta en todo el sistema (Azul Grisáceo) y cuatro acentos con un trabajo específico cada uno (Salvia, Terracota, Rosa Empolvado, Dorado Chispa). El negro puro #000000 queda fuera del sistema por completo: el Azul Grisáceo #3F4A63 lo sustituye en todo texto, icono o línea que en otra marca sería negra. Es más cálido, mantiene el contraste y no pelea con la estética pastel.
+COLOR
+USO PRINCIPAL
+USO SECUNDARIO
+NO UTILIZAR PARA
+Crema
+#F7F2EA
+LUZ
+Fondo principal de cualquier documento o pantalla.
+Fondo de tarjetas sobre fotografía clara.
+⚠ Texto sobre Blanco Cálido (contraste insuficiente).
+Blanco Cálido
+#FFFDF9
+BASE
+Tarjetas y zonas de contenido sobre fondo Crema.
+Fondo de tablas y formularios.
+⚠ Fondos de pantalla completa (queda plano sin la Crema debajo).
+Azul Grisáceo
+#3F4A63
+SERENIDAD
+Texto principal, títulos y wordmark del logotipo.
+Iconos de navegación, bordes sutiles, pies de página.
+⚠ Bloques de fondo que superen el 40% de la página.
+Salvia
+#A5AD8E
+EQUILIBRIO
+Acentos botánicos, badges de estado, tarjetas de proyecto.
+Fondos orgánicos suaves, iconos de tarea completada.
+⚠ Texto pequeño sobre fondo Crema: revisar siempre el contraste WCAG.
+Terracota
+#C99579
+ENERGÍA
+Botones secundarios, avisos cálidos, acentos “by sunny”.
+Iconos de reformas, llamadas a la acción, promociones.
+⚠ Cuerpo de texto de un párrafo largo.
+Rosa Empolvado
+#D9B5A2
+CALIDEZ
+Formas orgánicas de fondo, ilustraciones complementarias.
+Separadores visuales, etiquetas secundarias.
+⚠ Elementos técnicos que requieran alta legibilidad.
+Dorado Chispa
+#C9AD78
+CHISPA
+Símbolo ✦, iconos de ideas, detalles de marca premium.
+Citas destacadas, marcas de agua, apliques decorativos.
+⚠ Bloques grandes de texto.
+Reglas de combinación
+{ListParagraph} Base neutra siempre presente: Crema o Blanco Cálido ocupan como mínimo el 55-60% de cualquier composición. El color aquí orienta, no rellena.
+{ListParagraph} Máximo dos acentos por vista o página. Si Salvia domina, Terracota o Dorado Chispa apoyan; nunca los tres acentos cálidos a la vez compitiendo por atención.
+{ListParagraph} El Azul Grisáceo es el único color autorizado para texto de lectura larga; los acentos se reservan para títulos cortos, iconos, badges y detalles.
+{ListParagraph} Antes de dar por buena una combinación texto/fondo, comprobar el contraste WCAG AA —en concreto Salvia y Rosa Empolvado fallan con texto pequeño sobre Crema.
+{ListParagraph} En Hogar Studio (producto), Salvia = estado “completado/avance” y Terracota = “prioridad/atención”. No se intercambian entre sí en ningún estado de interfaz.
+SECCIÓN 04
+{Heading1} Tipografía
+Tres fuentes, tres trabajos distintos, y una regla que no se negocia: nunca más de tres familias tipográficas activas en la misma pieza. En la práctica, el 95% de cualquier documento se resuelve solo con Fraunces + Manrope; JetBrains Mono entra únicamente cuando hay una razón funcional —una cota, un código, un dato técnico—, nunca por decoración.
+FRAUNCES
+La chispa · la imaginación · lo humano
+Lumina
+Editorial, artesanal, con carácter. Solo para identidad y titulares: Logo, H1, H2. Nunca en párrafos.
+MANROPE
+El orden · la claridad · la acción
+Organiza tu hogar
+Legible, contemporánea, neutra. Cuerpo de texto, navegación, botones, etiquetas: hace casi todo el trabajo.
+JETBRAINS MONO
+Cotas · códigos · metadatos UI
+80×80 cm // #3F4A63
+Monoespaciada, técnica. Solo para badges, referencias, tablas de datos y medidas. Uso funcional, no ornamental.
+{Heading2} Tabla de jerarquía
+USO
+FUENTE
+PESO
+TAMAÑO ORIENTATIVO
+Logo LUMINA
+Fraunces
+600 (SemiBold)
+28–36 pt
+“by sunny”
+Manrope
+400–500
+11–13 pt
+Hogar Studio
+Manrope
+700 (Bold)
+16–18 pt
+Título / H1
+Fraunces
+600
+22–24 pt
+H2
+Fraunces
+500–600
+17–19 pt
+H3
+Manrope
+700
+13–15 pt
+Texto normal
+Manrope
+400
+10,5–11,5 pt
+Texto destacado
+Manrope
+500
+11–12 pt
+Botones
+Manrope
+600–700
+10–11 pt
+Etiquetas / categorías
+Manrope
+600
+9–10 pt
+Datos / cotas / códigos
+JetBrains Mono
+400–500
+9–10 pt
+Firma decorativa (excepcional)
+Caveat
+500
+14–16 pt
+Cómo se leen estas reglas en el día a día
+{ListParagraph} Si dudas entre Fraunces o Manrope para un texto, pregúntate si alguien lo va a leer de corrido. Si la respuesta es sí, es Manrope.
+{ListParagraph} JetBrains Mono no es “la fuente de los números” en general: un precio en una tarjeta va en Manrope. JetBrains Mono es para datos técnicos verificables —medidas, referencias, códigos de color.
+{ListParagraph} Caveat (manuscrita) no forma parte del logotipo ni de ningún encabezado. Es un recurso opcional para una firma personal o una nota manuscrita, y aparece como máximo una vez por documento.
+SECCIÓN 05
+{Heading1} Elementos visuales
+Más allá del logotipo, LUMINA se apoya en un vocabulario reducido de formas: la chispa, curvas orgánicas, un motivo botánico puntual y texturas suaves. Todos comparten la misma regla no escrita en el material original pero evidente en cuanto se mira: son acentos, nunca protagonistas. Si un elemento visual compite con el contenido por la atención, sobra.
+{Heading2} Chispa (✦)
+Ya descrita en la sección 01 como símbolo de marca. Aquí se usa además como micro-recurso gráfico: separador de sección (línea fina + chispa + línea fina), viñeta de lista en documentos editoriales y acento sobre citas. Nunca a más de un tamaño destacado por página.
+{Heading2} Formas orgánicas
+Manchas y curvas de bordes redondeados, sin esquinas rectas, en tonos Rosa Empolvado, Crema o Salvia a baja saturación. Se usan como fondo decorativo en esquinas de portadas y membretes —nunca detrás de bloques de texto extensos, donde reducirían la legibilidad.
+{ListParagraph} Portadas y cabeceras de documento: una o dos formas por esquina, máximo el 20% de la superficie.
+{ListParagraph} Tarjetas de producto en Hogar Studio: forma orgánica sutil como fondo de icono, no de todo el módulo.
+{Heading2} Motivo botánico (hojas)
+Una rama u hoja lineal, dibujada en trazo fino, es el acento botánico de la marca. Aparece junto al logotipo en composiciones especiales, como ilustración de apoyo en las esquinas de fondos documentales y como parte de la Chispa Botánica. No se usa como patrón repetido a gran escala: eso es del terreno de las “texturas”, no de la ilustración de acento.
+{Heading2} Texturas y fondos
+{ListParagraph} Fondo documental pastel — Base neutra, sin patrón, en Crema o Blanco Cálido. El 90% de las páginas de texto deberían usar este fondo.
+{ListParagraph} Fondo portada · curvas orgánicas — Combina formas orgánicas de fondo con el logotipo o el símbolo suelto. Reservado a portadas y separadores de sección.
+{ListParagraph} Patrón botánico suave — Motivo botánico repetido a opacidad muy baja (10-15%). Solo en separadores de capítulo o contraportadas; jamás detrás de texto de lectura.
+✓ Hacer
+· Reservar formas y texturas a portadas, separadores y esquinas.
+· Mantener la opacidad de cualquier patrón por debajo del 15% si hay texto cerca.
+· Usar un único acento gráfico dominante por composición.
+✕ Evitar
+· Patrones botánicos a plena opacidad detrás de párrafos.
+· Mezclar chispa + formas orgánicas + textura botánica en la misma esquina.
+· Formas orgánicas en colores saturados fuera de la paleta.
+SECCIÓN 06
+{Heading1} Fotografía
+La fotografía de LUMINA y Hogar Studio no vende un estilo de vida aspiracional de revista: documenta el proceso real de diseñar y organizar un hogar. Dos familias de imagen cubren todos los casos: bodegones de escritorio y ambientes interiores cálidos.
+{Heading2} Qué fotografiar
+{ListParagraph} Bodegones de proyecto — Composiciones de mesa de trabajo con planos, maqueta de casa de madera, cuaderno, muestras de color, taza de café, planta en maceta. Es la imagen “de marca” por excelencia: transmite proceso creativo y orden a la vez.
+{ListParagraph} Interiores cálidos — Salones y estancias reales con luz natural, mobiliario neutro, plantas y textiles en la paleta de marca. Documentan el resultado, no el proceso.
+{ListParagraph} Materiales y texturas naturales — Madera, lino, cerámica, terracota: primeros planos que refuerzan la sensación táctil y artesanal de la marca.
+{Heading2} Cómo debe verse
+✓ Buscar
+· Luz natural cálida, nunca fluorescente o azulada.
+· Composición despejada, con espacio para respirar.
+· Paleta de color coherente con la marca dentro de la propia foto.
+· Objetos y texturas reales: madera, lino, cerámica, papel.
+✕ Evitar
+· Fotografía de stock corporativo (oficinas, apretones de manos, sonrisas forzadas).
+· Luz fría, neón o flash directo con sombras duras.
+· Composiciones recargadas o desordenadas.
+· Colores saturados fuera de la paleta de marca.
+[IMAGE]
+Fig. 2 · Membrete Hogar Studio con bodegón de esquina: planos, maceta, cuaderno y maqueta de casa (referencia interna)
+SECCIÓN 07
+{Heading1} Ilustración
+El material de referencia mezclaba, sin decirlo del todo, dos registros de ilustración distintos. Aquí quedan separados porque cumplen funciones distintas y no deberían convivir en la misma pieza:
+{Heading2} Registro 1 · Iconografía 3D pastel (producto)
+Renders suaves en 3D, con luz cenital suave desde arriba a la izquierda, bordes redondeados, materiales mate (nunca brillantes o plásticos) y paleta limitada a los siete colores de marca. Es el lenguaje de la interfaz de Hogar Studio: decoración, reformas, organización, ideas, planos, compras, tareas, archivos, calendario.
+✓ Mantener
+· Luz suave y consistente en todos los iconos de un mismo set.
+· Formas redondeadas, sin aristas vivas.
+· Materiales mate dentro de la paleta de marca.
+✕ Evitar
+· Iconos planos tipo clipart corporativo.
+· Gradientes neón o efectos de plástico brillante.
+· Mezclar dentro del mismo set iconos 3D con iconos de línea.
+{Heading2} Registro 2 · Línea botánica (editorial)
+Trazo fino, monocromo (Azul Grisáceo o Dorado Chispa), una sola hoja o rama por composición. Se usa como acento en documentos, portadas y separadores —nunca en la interfaz de producto, que pertenece al registro 3D. Mezclar ambos registros en la misma pieza es la forma más rápida de que el sistema deje de parecer un sistema.
+[IMAGE]
+Fig. 3 · Set de iconos 3D pastel de Hogar Studio: decoración, reformas, organización, ideas, planos, compras, tareas, archivos (referencia interna)
+SECCIÓN 08
+{Heading1} Componentes
+Doce piezas cubren prácticamente cualquier documento o pantalla de LUMINA y Hogar Studio. No son plantillas cerradas sino reglas de construcción con un ejemplo aplicado; el criterio para añadir un componente nuevo al sistema es que se repita en al menos tres documentos distintos —si no, es un caso puntual y no merece entrar aquí.
+COMPONENTE 1 · TÍTULO Y SUBTÍTULO
+Transforma tu espacio con calma
+Guía paso a paso para la selección de materiales y distribución.
+Título en Fraunces 600, subtítulo en Manrope 500 en Terracota. El subtítulo nunca repite literalmente el título: añade contexto o la acción siguiente.
+COMPONENTE 2 · PÁRRAFO BASE
+El diseño consciente no busca recargar las estancias, sino despejar la mente. A través de la iluminación natural y los materiales nobles, creamos hogares funcionales que celebran lo esencial.
+Manrope 400, interlineado generoso (1.4-1.5). Máximo 75 caracteres por línea para no perder la sensación de calma visual.
+COMPONENTE 3 · TARJETA (CARD)
+[PROYECTO ACTIVO]                              ✦ Hogar Studio
+Remodelación cocina Salvia
+Selección de acabados mate, madera clara y detalles cerámicos cálidos.
+Fondo Crema sobre Blanco Cálido, esquinas redondeadas, etiqueta de estado a la izquierda y firma de marca a la derecha.
+COMPONENTE 4 · CAJA DE CITA
+✦
+“La luz siempre encuentra un camino para inspirar.”
+— LUMINA INSPIRATIONS
+Fondo Rosa Empolvado al 20% de opacidad (aquí simulado en un tono claro derivado), texto centrado en Fraunces cursiva, atribución en JetBrains Mono.
+COMPONENTE 5 · CAJA DE AVISO (ALERT)
+✦  Nota de diseño: asegura mantener un margen libre equivalente a la altura de la letra “U” alrededor del logotipo.
+Borde izquierdo grueso en Salvia, fondo Salvia al 15%. Se reserva para advertencias de uso de marca, nunca para errores críticos de producto (esos usan un color de alerta específico fuera de esta paleta).
+COMPONENTE 6 · SEPARADOR DECORATIVO
+                              ✦                              
+Línea fina en Azul Grisáceo al 20% de opacidad, interrumpida por la chispa en Dorado. Marca el cambio de sección dentro de un mismo documento.
+COMPONENTE 7 · ETIQUETAS (BADGES)
+  REFORMA       DECORACIÓN       TAREA PENDIENTE  
+Mayúsculas, JetBrains Mono, siempre en cápsula. El color de fondo comunica la categoría (Salvia, Terracota) o el estado neutro (Crema con borde).
+COMPONENTE 8 · BOTONES DE ACCIÓN
+   PRIMARIO           SECUNDARIO           OUTLINE   
+Primario en Azul Grisáceo para la acción principal de la pantalla; Secundario en Salvia para acciones de apoyo; Outline para acciones reversibles o de menor peso. Nunca más de un botón primario visible a la vez.
+COMPONENTE 9 · FICHA TÉCNICA MODULAR
+REF_PROYECTO: #LUM-2026                              ESTADO: APROBADO
+SUPERFICIE
+85 m² útiles
+PALETA SUGERIDA
+Crema, Salvia y Terracota
+TIEMPO ESTIMADO
+4 semanas
+Fondo Crema, cabecera con referencia y estado, cuerpo en columnas de datos breves. Es el componente que sostiene fichas de proyecto de Hogar Studio.
+COMPONENTE 10 · TABLA DE DATOS
+CATEGORÍA
+MATERIAL / ACABADO
+UBICACIÓN
+OK
+Pavimento
+Madera de roble clara
+Salón y pasillos
+✓
+Pintura
+Mate Crema #F7F2EA
+Toda la vivienda
+✓
+Cabecera en Azul Grisáceo con texto Blanco Cálido; filas alternando Blanco Cálido y Crema para facilitar el escaneo sin usar líneas de rejilla pesadas.
+COMPONENTE 11 · ESTRUCTURA DE PORTADA
+✦
+NOMBRE DEL PROYECTO
+Ficha técnica · Hogar Studio
+REF #LUM-2026 · Septiembre 2026
+{ListParagraph} Chispa centrada arriba, título en Fraunces, subtítulo de contexto en Terracota, referencia técnica en JetBrains Mono al pie. Fondo Crema o forma orgánica sutil en una esquina.
+{ListParagraph} El logotipo completo (con “by sunny”) solo aparece en portadas de comunicación de marca; las fichas de proyecto de Hogar Studio usan el isotipo casa-hoja.
+COMPONENTE 12 · PIE DE PÁGINA
+✦ LUMINA · Hogar Studio                                                              Página 1 de 8
+Firma compuesta Lumina + Hogar Studio a la izquierda, numeración a la derecha, todo en JetBrains Mono a bajo contraste. Aparece en todo documento de más de una página; se omite en portadas.
