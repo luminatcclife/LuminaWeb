@@ -2,6 +2,8 @@
 
 Sitio web de **LUMINA** (by sunny) — software a medida con diseño neurocognitivo para personas neurodivergentes (TDAH, alta sensibilidad, hiperfoco disperso) y profesionales bajo alta demanda atencional.
 
+**Sitio en vivo:** https://luminatcclife.github.io/LuminaWeb/
+
 Construido como un canvas de [Claude Design](https://claude.ai/design) (`.dc.html`), no HTML estático convencional.
 
 ## Estructura
