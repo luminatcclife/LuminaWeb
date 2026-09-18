@@ -28,20 +28,37 @@
     background:rgba(255,253,249,.7); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
     border:1px solid rgba(63,74,99,.1); border-radius:16px;
     box-shadow:0 4px 24px -4px rgba(63,74,99,.06);
-    transition:transform .4s ease, box-shadow .4s ease;
-    animation:cardIn .6s ease-out backwards;
+    opacity:0; transform:translateY(30px);
+    transition:opacity 1.15s cubic-bezier(.16,.8,.24,1), transform 1.15s cubic-bezier(.16,.8,.24,1), box-shadow .4s ease;
   }
   .glass-card:hover{ transform:translateY(-3px); box-shadow:0 14px 32px -6px rgba(63,74,99,.12); }
+  .glass-card.is-in, .glass-card-dark.is-in{ opacity:1; transform:translateY(0); }
+  .glass-card.is-in:hover{ transform:translateY(-3px); }
   .glass-card-dark{
     background:rgba(255,253,249,.07); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
     border:1px solid rgba(255,253,249,.12); border-radius:16px;
-    transition:transform .4s ease, box-shadow .4s ease;
-    animation:cardIn .6s ease-out backwards;
+    opacity:0; transform:translateY(30px);
+    transition:opacity 1.15s cubic-bezier(.16,.8,.24,1), transform 1.15s cubic-bezier(.16,.8,.24,1), box-shadow .4s ease;
   }
-  .glass-card-dark:hover{ transform:translateY(-3px); box-shadow:0 14px 32px -6px rgba(0,0,0,.25); }
+  .glass-card-dark.is-in:hover{ transform:translateY(-3px); box-shadow:0 14px 32px -6px rgba(0,0,0,.25); }
   .accent-bar{ width:40px; height:4px; border-radius:999px; transition:width .3s ease; }
   .glass-card:hover .accent-bar, .glass-card-dark:hover .accent-bar{ width:56px; }
-  @keyframes cardIn{ from{ opacity:0; transform:translateY(14px); } to{ opacity:1; transform:translateY(0); } }
+
+  /* revelado calmo al hacer scroll: cada tarjeta espera a entrar en pantalla, sin repetirse */
+  @keyframes panelIn{ from{ opacity:0; transform:translateY(-6px); } to{ opacity:1; transform:translateY(0); } }
+
+  /* texto que se reemplaza a sí mismo despacio, sin parpadeo (dirección "con vida, transmitiendo calma") */
+  .tag-swap{ position:relative; display:inline-block; height:1.3em; min-width:230px; overflow:hidden; vertical-align:bottom; }
+  .tag-swap-item{ position:absolute; left:0; top:0; white-space:nowrap; opacity:0; animation:tagSwap 13.5s cubic-bezier(.45,0,.2,1) infinite; }
+  .tag-swap-item:nth-child(2){ animation-delay:4.5s; }
+  .tag-swap-item:nth-child(3){ animation-delay:9s; }
+  @keyframes tagSwap{
+    0%{ opacity:0; transform:translateY(7px); }
+    5%{ opacity:1; transform:translateY(0); }
+    30%{ opacity:1; transform:translateY(0); }
+    36%{ opacity:0; transform:translateY(-7px); }
+    100%{ opacity:0; }
+  }
 
   /* ---------- hero: constelación, respiración, ancla flotante (dirección Sansara) ---------- */
   .motif{ position:absolute; top:-30px; right:-150px; width:380px; height:380px; pointer-events:none; z-index:1; }
@@ -63,7 +80,10 @@
   @keyframes pulse{ 0%,100%{ opacity:.75; r:5; } 50%{ opacity:1; r:6.4; } }
   @keyframes drift{ 0%,100%{ transform:translate(0,0); } 50%{ transform:translate(4px,-5px); } }
   @media (prefers-reduced-motion: reduce){
-    .breath, .motif .node, .glass-card, .glass-card-dark{ animation:none; }
+    .breath, .motif .node{ animation:none; }
+    .glass-card, .glass-card-dark{ transition:none; opacity:1; transform:none; }
+    .tag-swap-item{ animation:none; opacity:0; }
+    .tag-swap-item:first-child{ opacity:1; }
   }
   @media (max-width: 820px){
     .motif{ opacity:.55; transform:scale(.7); top:-40px; right:-190px; }
@@ -156,7 +176,14 @@
   </div>
   <div style="position:relative; z-index:2; max-width:1160px; margin:0 auto; padding:80px 28px 88px; display:grid; grid-template-columns:repeat(auto-fit, minmax(330px,1fr)); gap:52px; align-items:center">
     <div>
-      <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:#96562F">Software a medida · Diseño neurocognitivo</div>
+      <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:#96562F; display:flex; flex-wrap:wrap; gap:.4em; align-items:baseline">
+        <span>Software a medida ·</span>
+        <span class="tag-swap" aria-hidden="true">
+          <span class="tag-swap-item">Diseño neurocognitivo</span>
+          <span class="tag-swap-item">Baja fricción cognitiva</span>
+          <span class="tag-swap-item">Foco, no fuerza de voluntad</span>
+        </span>
+      </div>
       <h1 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:clamp(36px,4.8vw,58px); line-height:1.03; letter-spacing:-0.01em; margin:18px 0 0; text-wrap:pretty">Software que no te obliga<br />a pelear con tu <span class="glow-word">cabeza</span>.</h1>
       <p style="font-size:16.5px; line-height:1.65; margin:20px 0 0; max-width:48ch; text-wrap:pretty">Desarrollamos herramientas a medida para personas neurodivergentes —TDAH, alta sensibilidad, hiperfoco disperso— y para profesionales bajo alta demanda atencional. Cada decisión de diseño responde a un mecanismo neurocognitivo concreto, no a una tendencia visual.</p>
       <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:30px">
@@ -227,7 +254,7 @@
                 <span>{{ p.toggleLabel }}</span><span style="font-size:10px">{{ p.chevron }}</span>
               </button>
               <sc-if value="{{ p.abierto }}" hint-placeholder-val="{{ false }}">
-                <div style="margin-top:12px; background:#FFFDF9; border-radius:10px; padding:16px 18px; border:1px solid rgba(63,74,99,.1)">
+                <div style="margin-top:12px; background:#FFFDF9; border-radius:10px; padding:16px 18px; border:1px solid rgba(63,74,99,.1); animation:panelIn .5s cubic-bezier(.16,.8,.24,1)">
                   <p style="font-size:14px; line-height:1.6; margin:0; max-width:64ch">{{ p.porque }}</p>
                   <div style="font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:.08em; margin-top:11px; color:rgba(63,74,99,.84)">BASE · {{ p.fuente }}</div>
                 </div>
@@ -804,7 +831,19 @@ class Component extends DCLogic {
     nombre: "", correo: "", foco: null, enviado: false, nombreEnviado: ""
   };
 
-  componentWillUnmount() { clearInterval(this._t); }
+  componentDidMount() {
+    this._io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-in");
+          this._io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -60px 0px" });
+    document.querySelectorAll(".glass-card, .glass-card-dark").forEach(el => this._io.observe(el));
+  }
+
+  componentWillUnmount() { clearInterval(this._t); this._io && this._io.disconnect(); }
 
   reproducir() {
     clearInterval(this._t);
