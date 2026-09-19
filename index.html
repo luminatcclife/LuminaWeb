@@ -80,7 +80,7 @@
   @keyframes pulse{ 0%,100%{ opacity:.75; r:5; } 50%{ opacity:1; r:6.4; } }
   @keyframes drift{ 0%,100%{ transform:translate(0,0); } 50%{ transform:translate(4px,-5px); } }
   @media (prefers-reduced-motion: reduce){
-    .breath, .motif .node{ animation:none; }
+    .breath, .glow, .motif .node{ animation:none; opacity:.4; }
     .glass-card, .glass-card-dark{ transition:none; opacity:1; transform:none; }
     .tag-swap-item{ animation:none; opacity:0; }
     .tag-swap-item:first-child{ opacity:1; }
@@ -90,7 +90,8 @@
   }
 
   .breath{ position:absolute; inset:0; pointer-events:none; z-index:0; }
-  .glow{ position:absolute; left:50%; width:1400px; height:300px; filter:blur(24px); }
+  .glow{ position:absolute; left:50%; width:1400px; height:300px; filter:blur(24px); animation-play-state:paused; }
+  .breath.is-active .glow{ animation-play-state:running; }
   .glow-top{ top:-140px;
     background:radial-gradient(ellipse closest-side, rgba(196,140,64,.85), rgba(165,173,142,.45) 55%, transparent 80%);
     animation:breathe-in 5.2s ease-in-out infinite; }
@@ -231,8 +232,12 @@
   </div>
 </section>
 
-<section id="problema" style="background:#FFFDF9; border-top:1px solid rgba(63,74,99,.1); border-bottom:1px solid rgba(63,74,99,.1)">
-  <div style="max-width:1160px; margin:0 auto; padding:78px 28px">
+<section id="problema" style="position:relative; overflow:hidden; background:#FFFDF9; border-top:1px solid rgba(63,74,99,.1); border-bottom:1px solid rgba(63,74,99,.1)">
+  <div class="breath" aria-hidden="true">
+    <div class="glow glow-top"></div>
+    <div class="glow glow-bottom"></div>
+  </div>
+  <div style="position:relative; z-index:2; max-width:1160px; margin:0 auto; padding:78px 28px">
     <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:#96562F">El problema</div>
     <h2 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:clamp(28px,3.4vw,40px); line-height:1.1; margin:10px 0 0; max-width:20ch; text-wrap:pretty">Cinco formas concretas en que el software gasta tu atención</h2>
     <p style="font-size:15.5px; line-height:1.65; margin:16px 0 0; max-width:60ch">No son problemas de voluntad ni de organización personal. Son costes cognitivos que la herramienta impone y que la herramienta puede dejar de imponer.</p>
@@ -287,7 +292,12 @@
   </div>
 </section>
 
-<section id="servicios" style="max-width:1160px; margin:0 auto; padding:78px 28px">
+<section id="servicios" style="position:relative; overflow:hidden">
+  <div class="breath" aria-hidden="true">
+    <div class="glow glow-top"></div>
+    <div class="glow glow-bottom"></div>
+  </div>
+  <div style="position:relative; z-index:2; max-width:1160px; margin:0 auto; padding:78px 28px">
   <div style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:20px">
     <div>
       <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:#96562F">Servicios</div>
@@ -317,10 +327,15 @@
       </article>
     </sc-for>
   </div>
+  </div>
 </section>
 
-<section id="proyectos" style="background:#FFFDF9; border-top:1px solid rgba(63,74,99,.1); border-bottom:1px solid rgba(63,74,99,.1)">
-  <div style="max-width:1160px; margin:0 auto; padding:78px 28px">
+<section id="proyectos" style="position:relative; overflow:hidden; background:#FFFDF9; border-top:1px solid rgba(63,74,99,.1); border-bottom:1px solid rgba(63,74,99,.1)">
+  <div class="breath" aria-hidden="true">
+    <div class="glow glow-top"></div>
+    <div class="glow glow-bottom"></div>
+  </div>
+  <div style="position:relative; z-index:2; max-width:1160px; margin:0 auto; padding:78px 28px">
     <div style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:20px">
       <div>
         <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:#96562F">Proyectos</div>
@@ -365,7 +380,12 @@
   </div>
 </section>
 
-<section id="recorrido" style="max-width:1160px; margin:0 auto; padding:78px 28px">
+<section id="recorrido" style="position:relative; overflow:hidden">
+  <div class="breath" aria-hidden="true">
+    <div class="glow glow-top"></div>
+    <div class="glow glow-bottom"></div>
+  </div>
+  <div style="position:relative; z-index:2; max-width:1160px; margin:0 auto; padding:78px 28px">
   <div style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:20px">
     <div>
       <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:#96562F">Recorrido</div>
@@ -434,10 +454,15 @@
       <div style="font-size:12.5px; line-height:1.55; margin-top:16px; color:rgba(63,74,99,.86)">Maqueta interactiva del producto. Sustituible por una grabación real de pantalla cuando esté lista.</div>
     </div>
   </div>
+  </div>
 </section>
 
-<section id="fundamentos" style="background:#3F4A63; color:#FFFDF9">
-  <div style="max-width:1160px; margin:0 auto; padding:78px 28px">
+<section id="fundamentos" style="position:relative; overflow:hidden; background:#3F4A63; color:#FFFDF9">
+  <div class="breath" aria-hidden="true">
+    <div class="glow glow-top"></div>
+    <div class="glow glow-bottom"></div>
+  </div>
+  <div style="position:relative; z-index:2; max-width:1160px; margin:0 auto; padding:78px 28px">
     <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:#E2CB92">Fundamentos</div>
     <h2 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:clamp(28px,3.4vw,40px); line-height:1.1; margin:10px 0 0; color:#FFFDF9; max-width:22ch; text-wrap:pretty">Cada línea de código responde a un modelo</h2>
     <p style="font-size:15.5px; line-height:1.65; margin:16px 0 0; max-width:62ch; color:rgba(255,253,249,.92)">Cinco marcos consolidados en la literatura de neurociencia cognitiva y neuropsicología. No los citamos como adorno: definen decisiones concretas de arquitectura e interfaz.</p>
@@ -459,7 +484,12 @@
   </div>
 </section>
 
-<section id="proceso" style="max-width:1160px; margin:0 auto; padding:78px 28px">
+<section id="proceso" style="position:relative; overflow:hidden">
+  <div class="breath" aria-hidden="true">
+    <div class="glow glow-top"></div>
+    <div class="glow glow-bottom"></div>
+  </div>
+  <div style="position:relative; z-index:2; max-width:1160px; margin:0 auto; padding:78px 28px">
   <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:#96562F">Proceso</div>
   <h2 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:clamp(28px,3.4vw,40px); line-height:1.1; margin:10px 0 0">Cómo trabajamos contigo</h2>
   <p style="font-size:15.5px; line-height:1.65; margin:14px 0 0; max-width:58ch">Cuatro fases con un entregable concreto cada una. En ningún momento tienes más de dos o tres decisiones abiertas a la vez — el proceso se diseña con los mismos principios que el producto.</p>
@@ -482,10 +512,15 @@
       <div style="font-family:Caveat, cursive; font-size:26px; color:#96562F; margin-top:14px">— sunny</div>
     </div>
   </div>
+  </div>
 </section>
 
-<section id="contacto" style="background:#FFFDF9; border-top:1px solid rgba(63,74,99,.1)">
-  <div style="max-width:1160px; margin:0 auto; padding:78px 28px; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:44px; align-items:start">
+<section id="contacto" style="position:relative; overflow:hidden; background:#FFFDF9; border-top:1px solid rgba(63,74,99,.1)">
+  <div class="breath" aria-hidden="true">
+    <div class="glow glow-top"></div>
+    <div class="glow glow-bottom"></div>
+  </div>
+  <div style="position:relative; z-index:2; max-width:1160px; margin:0 auto; padding:78px 28px; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:44px; align-items:start">
     <div>
       <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:#96562F">Contacto</div>
       <h2 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:clamp(28px,3.4vw,40px); line-height:1.1; margin:10px 0 0; max-width:16ch; text-wrap:pretty">Empecemos por el punto que más se atasca</h2>
@@ -841,9 +876,20 @@ class Component extends DCLogic {
       });
     }, { threshold: 0.15, rootMargin: "0px 0px -60px 0px" });
     document.querySelectorAll(".glass-card, .glass-card-dark").forEach(el => this._io.observe(el));
+
+    this._ioBreath = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle("is-active", entry.isIntersecting);
+      });
+    }, { rootMargin: "200px 0px 200px 0px" });
+    document.querySelectorAll(".breath").forEach(el => this._ioBreath.observe(el));
   }
 
-  componentWillUnmount() { clearInterval(this._t); this._io && this._io.disconnect(); }
+  componentWillUnmount() {
+    clearInterval(this._t);
+    this._io && this._io.disconnect();
+    this._ioBreath && this._ioBreath.disconnect();
+  }
 
   reproducir() {
     clearInterval(this._t);
