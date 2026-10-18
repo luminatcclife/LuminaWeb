@@ -173,7 +173,7 @@
       <text class="label" x="290" y="150">SWELLER</text>
       <text class="label" x="450" y="264">LEROY</text>
       <text class="label" x="150" y="78">SONUGA-BARKE</text>
-      <text class="label" x="418" y="424">POSNER</text>
+      <text class="label" x="418" y="424">NORMAN</text>
     </svg>
   </div>
   <div style="position:relative; z-index:2; max-width:1160px; margin:0 auto; padding:80px 28px 88px; display:grid; grid-template-columns:repeat(auto-fit, minmax(330px,1fr)); gap:52px; align-items:center">
@@ -181,15 +181,15 @@
       <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:#96562F; display:flex; flex-wrap:wrap; gap:.4em; align-items:baseline">
         <span>Software a medida ·</span>
         <span class="tag-swap" aria-hidden="true">
-          <span class="tag-swap-item">Diseño neurocognitivo</span>
+          <span class="tag-swap-item">Diseño basado en investigación</span>
           <span class="tag-swap-item">Baja fricción cognitiva</span>
           <span class="tag-swap-item">Foco, no fuerza de voluntad</span>
         </span>
       </div>
       <h1 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:clamp(36px,4.8vw,58px); line-height:1.03; letter-spacing:-0.01em; margin:18px 0 0; text-wrap:pretty">Software que no te obliga<br />a pelear con tu <span class="glow-word">cabeza</span>.</h1>
-      <p style="font-size:16.5px; line-height:1.65; margin:20px 0 0; max-width:48ch; text-wrap:pretty">Desarrollamos herramientas a medida para personas neurodivergentes —TDAH, alta sensibilidad, hiperfoco disperso— y para profesionales bajo alta demanda atencional. Cada decisión de diseño responde a un mecanismo neurocognitivo concreto, no a una tendencia visual.</p>
+      <p style="font-size:16.5px; line-height:1.65; margin:20px 0 0; max-width:48ch; text-wrap:pretty">Desarrollamos herramientas a medida para personas neurodivergentes —TDAH, alta sensibilidad, hiperfoco disperso— y para profesionales bajo alta demanda atencional. Cada decisión de diseño se apoya en investigación publicada sobre la atención y la organización, no en una tendencia visual.</p>
       <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:30px">
-        <a href="#contacto" style="background:#3F4A63; color:#FFFDF9; padding:14px 26px; border-radius:8px; font-weight:700; font-size:12px; letter-spacing:.08em; text-transform:uppercase" style-hover="background:#C99579">Agenda un diagnóstico</a>
+        <a href="#contacto" style="background:#3F4A63; color:#FFFDF9; padding:14px 26px; border-radius:8px; font-weight:700; font-size:12px; letter-spacing:.08em; text-transform:uppercase" style-hover="background:#C99579">Agenda una llamada</a>
         <a href="#fundamentos" style="border:1.5px solid #3F4A63; color:#3F4A63; padding:12.5px 26px; border-radius:8px; font-weight:700; font-size:12px; letter-spacing:.08em; text-transform:uppercase" style-hover="background:#3F4A63; color:#FFFDF9">Ver los fundamentos</a>
       </div>
       <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:34px">
@@ -490,8 +490,8 @@
   </div>
   <div style="position:relative; z-index:2; max-width:1160px; margin:0 auto; padding:78px 28px">
     <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:#E2CB92">Fundamentos</div>
-    <h2 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:clamp(28px,3.4vw,40px); line-height:1.1; margin:10px 0 0; color:#FFFDF9; max-width:22ch; text-wrap:pretty">Cada línea de código responde a un modelo</h2>
-    <p style="font-size:15.5px; line-height:1.65; margin:16px 0 0; max-width:62ch; color:rgba(255,253,249,.92)">Cinco marcos consolidados en la literatura de neurociencia cognitiva y neuropsicología. No los citamos como adorno: definen decisiones concretas de arquitectura e interfaz.</p>
+    <h2 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:clamp(28px,3.4vw,40px); line-height:1.1; margin:10px 0 0; color:#FFFDF9; max-width:22ch; text-wrap:pretty">Las ideas en las que nos apoyamos</h2>
+    <p style="font-size:15.5px; line-height:1.65; margin:16px 0 0; max-width:62ch; color:rgba(255,253,249,.92)">Cinco trabajos de investigación que guían decisiones concretas de diseño. Los citamos como referencia de su obra: no hablan por nosotros ni avalan nuestras herramientas, que son de organización y no un tratamiento.</p>
 
     <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:16px; margin-top:34px">
       <sc-for list="{{ fundamentos }}" as="f" hint-placeholder-count="5">
@@ -499,6 +499,7 @@
           <div class="accent-bar" style="background:#E2CB92; margin-bottom:14px"></div>
           <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:.1em; color:#E2CB92">{{ f.n }} · {{ f.autor }}</div>
           <h3 style="font-family:Fraunces, Georgia, serif; font-weight:600; font-size:20px; line-height:1.2; margin:11px 0 0; color:#FFFDF9">{{ f.titulo }}</h3>
+          <div style="font-size:12.5px; line-height:1.5; margin:6px 0 0; font-style:italic; color:rgba(255,253,249,.78)">{{ f.obra }}</div>
           <p style="font-size:14px; line-height:1.6; margin:10px 0 0; color:rgba(255,253,249,.9)">{{ f.teoria }}</p>
           <div style="margin-top:16px; padding-top:14px; border-top:1px solid rgba(255,253,249,.15)">
             <div style="font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:.12em; color:#E2CB92">TRADUCCIÓN AL PRODUCTO</div>
@@ -554,7 +555,7 @@
       <div style="display:flex; flex-direction:column; gap:10px; margin-top:26px; font-size:14.5px">
         <div style="display:flex; gap:10px; align-items:center"><span style="color:#C9AD78">✦</span><span>Sin formularios largos: tres campos y listo.</span></div>
         <div style="display:flex; gap:10px; align-items:center"><span style="color:#C9AD78">✦</span><span>Respuesta en 48 h hábiles, siempre por escrito.</span></div>
-        <div style="display:flex; gap:10px; align-items:center"><span style="color:#C9AD78">✦</span><span>Diagnóstico inicial sin coste ni compromiso.</span></div>
+        <div style="display:flex; gap:10px; align-items:center"><span style="color:#C9AD78">✦</span><span>Primera llamada sin coste ni compromiso.</span></div>
       </div>
     </div>
 
@@ -614,18 +615,18 @@ const PROBLEMAS = [
   {
     n: "01", color: "#C99579",
     titulo: "Parálisis por análisis y fatiga de decisión",
-    sintoma: "Ante un objetivo abstracto o demasiado grande, las decisiones se acumulan hasta que el freno inhibitorio colapsa y no arranca nada. No es pereza: es coste de decisión acumulado.",
+    sintoma: "Ante un objetivo abstracto o demasiado grande, las decisiones se acumulan hasta bloquearlo todo y no arranca nada. No es pereza: es el peso de demasiadas decisiones juntas.",
     solucion: "Dividimos el proyecto en secuencias de micro-pasos atómicos de 2 a 10 minutos, alineados con la curva de energía real del usuario, de forma que en cada momento solo exista una decisión posible.",
     porque: "La capacidad de decisión es un recurso finito. Al fragmentar el objetivo en unidades atómicas, el sistema toma por adelantado las decisiones de secuencia y deja al usuario únicamente la ejecución, que es donde su atención sí rinde.",
-    fuente: "Modelo híbrido de funciones ejecutivas (Barkley) · Carga cognitiva (Sweller)"
+    fuente: "Funciones ejecutivas (Russell A. Barkley, 1997) · Carga cognitiva (John Sweller, 1988)"
   },
   {
     n: "02", color: "#A5AD8E",
     titulo: "Fallas de autorregulación en el momento de actuar",
     sintoma: "Saber qué hay que hacer no basta. El fallo ocurre en el point of performance: justo cuando toca actuar, la intención no se convierte en acción.",
     solucion: "Sustituimos la dependencia de la fuerza de voluntad por estructuras externas visibles: anclas de monotarea permanentes en pantalla (Top Anchor Hero) que reducen el coste de activación.",
-    porque: "Según el modelo de Barkley, el TDAH no es un déficit de conocimiento sino de autorregulación en el punto de la acción. Externalizar el soporte —mantenerlo visible en el entorno en lugar de en la memoria de trabajo— rebaja la demanda sobre el circuito corticoestriatal.",
-    fuente: "Point of performance y externalización de la memoria de trabajo (Barkley)"
+    porque: "Russell Barkley describe el TDAH no como falta de conocimiento, sino como dificultad para regularse justo en el momento de actuar. Por eso dejamos el apoyo a la vista, en el entorno, en lugar de pedir a la persona que lo recuerde.",
+    fuente: "Punto de rendimiento (Russell A. Barkley, Taking Charge of Adult ADHD, 2010)"
   },
   {
     n: "03", color: "#C9AD78",
@@ -662,7 +663,7 @@ const SERVICIOS = [
     pie: "INCLUYE INVESTIGACIÓN Y ENTREGA CONTINUA"
   },
   {
-    badge: "DIAGNÓSTICO", badgeBg: "#C99579", plazo: "2–3 SEMANAS",
+    badge: "AUDITORÍA", badgeBg: "#C99579", plazo: "2–3 SEMANAS",
     titulo: "Auditoría de carga cognitiva",
     texto: "Revisamos un producto o flujo interno que ya existe y localizamos dónde impone coste atencional innecesario.",
     incluye: ["Mapa de decisiones por pantalla", "Inventario de interrupciones y notificaciones", "Informe con prioridades y esfuerzo estimado", "Sesión de traspaso con tu equipo"],
@@ -838,39 +839,44 @@ const RECORRIDOS = [
 
 const FUNDAMENTOS = [
   {
-    n: "01", autor: "Russell Barkley",
-    titulo: "Modelo híbrido de funciones ejecutivas",
-    teoria: "El TDAH no se explica por falta de conocimiento ni de voluntad, sino por un déficit primario de control inhibitorio y de autorregulación conductual en el punto exacto de la acción. La memoria de trabajo y la prospección temporal se agotan rápido.",
-    aplicacion: "Anclas de monotarea siempre visibles y soporte cognitivo externalizado en el entorno, para reducir el coste de activación en el circuito corticoestriatal."
+    n: "01", autor: "Russell A. Barkley",
+    titulo: "El punto de rendimiento",
+    obra: "Taking Charge of Adult ADHD (2010)",
+    teoria: "Barkley describe el TDAH como una dificultad para regularse en el momento de actuar —lo que llama el punto de rendimiento—, más que como falta de conocimiento o de ganas.",
+    aplicacion: "Dejamos a la vista lo que toca hacer ahora, en lugar de confiar en que se recuerde: una sola tarea anclada en pantalla."
   },
   {
     n: "02", autor: "John Sweller",
-    titulo: "Teoría de la carga cognitiva",
-    teoria: "La memoria de trabajo tiene una capacidad estrictamente limitada. Cuando la interfaz añade carga extrínseca —opciones, ruido, teoría de fondo— el resultado es fatiga de decisión y parálisis ejecutiva.",
-    aplicacion: "Máximo dos o tres variables simultáneas en pantalla y revelación progresiva: lo explicativo se despliega solo bajo demanda."
+    titulo: "Carga cognitiva",
+    obra: "«Cognitive load during problem solving», Cognitive Science (1988)",
+    teoria: "La memoria de trabajo tiene una capacidad limitada. Sweller mostró que lo que no aporta a la tarea —opciones, ruido, explicaciones de más— ocupa parte de esa capacidad.",
+    aplicacion: "Dos o tres cosas a la vez en pantalla como mucho. Las explicaciones se abren solo si las pides."
   },
   {
     n: "03", autor: "Sophie Leroy",
     titulo: "Residuo atencional",
-    teoria: "Al alternar bruscamente entre tareas o entornos no relacionados, una parte de la atención queda fijada en la actividad previa, lo que genera fatiga mental y reduce el rendimiento en la tarea siguiente.",
-    aplicacion: "Agrupamiento por Lugares Cognitivos y notificaciones diferidas que nunca interrumpen ni ocupan la pantalla durante un bloque de foco."
+    obra: "«Why is it so hard to do my work?», Organizational Behavior and Human Decision Processes (2009)",
+    teoria: "Leroy encontró que, al pasar a otra tarea sin cerrar la anterior, parte de la atención se queda en la primera y el rendimiento en la siguiente baja.",
+    aplicacion: "Agrupamos el trabajo por Lugares Cognitivos y guardamos los avisos para después: nunca interrumpen ni tapan la pantalla durante un bloque de foco."
   },
   {
-    n: "04", autor: "Sonuga-Barke · Rubia",
-    titulo: "Circuitos cortico-subcorticales y aversión al retraso",
-    teoria: "La neuroimagen muestra menor activación de la red fronto-estriatal y de los sistemas de recompensa subcorticales. La aversión al retraso explica que la motivación decaiga cuando el refuerzo queda lejos en el tiempo.",
-    aplicacion: "Micro-sprints atómicos de 2 a 5 minutos con retroalimentación inmediata, antes de que el gradiente de motivación caiga."
+    n: "04", autor: "Edmund Sonuga-Barke",
+    titulo: "Aversión a la espera",
+    obra: "«Hyperactivity and delay aversion», Journal of Child Psychology and Psychiatry (1992)",
+    teoria: "Sonuga-Barke y su equipo observaron que, en el TDAH, esperar una recompensa lejana resulta especialmente costoso, y se tiende a elegir lo inmediato.",
+    aplicacion: "Pasos cortos, de 2 a 5 minutos, que se ven terminados enseguida."
   },
   {
-    n: "05", autor: "Kolb · Posner · Norman & Shallice",
-    titulo: "Neuroplasticidad y sistemas atencionales de supervisión",
-    teoria: "El cerebro reorganiza sus redes mediante práctica estructurada y modificación del entorno. El Sistema Atencional de Supervisión y la red de atención ejecutiva permiten reorientar el foco mediante señales externas.",
-    aplicacion: "Señales ambientales neutras y rutinas libres de fricción que guían el control atencional sin recurrir a alertas ni presión emocional."
+    n: "05", autor: "Donald Norman · Tim Shallice",
+    titulo: "Rutinas y señales del entorno",
+    obra: "«Attention to action», en Consciousness and Self-Regulation (1986)",
+    teoria: "Norman y Shallice propusieron que las rutinas funcionan casi solas, mientras que lo nuevo o lo que se sale de la rutina pide una atención de supervisión, que se apoya en señales.",
+    aplicacion: "Rutinas sin fricción y señales neutras en el entorno que orientan sin alarmas ni presión."
   }
 ];
 
 const FASES = [
-  { n: "FASE 01", color: "#C99579", titulo: "Diagnóstico", texto: "Media jornada contigo para mapear dónde se pierde la energía: decisiones abiertas, interrupciones y puntos de abandono.", entregable: "ENTREGABLE · MAPA DE FRICCIÓN" },
+  { n: "FASE 01", color: "#C99579", titulo: "Mapa de fricción", texto: "Media jornada contigo para mapear dónde se pierde la energía: decisiones abiertas, interrupciones y puntos de abandono.", entregable: "ENTREGABLE · MAPA DE FRICCIÓN" },
   { n: "FASE 02", color: "#A5AD8E", titulo: "Arquitectura cognitiva", texto: "Definimos Lugares Cognitivos, secuencias de micro-pasos y qué se externaliza fuera de la memoria de trabajo.", entregable: "ENTREGABLE · MODELO Y FLUJOS" },
   { n: "FASE 03", color: "#C9AD78", titulo: "Construcción por sprints", texto: "Entregas cortas y usables desde la primera semana. Cada sprint cierra una fricción concreta del mapa inicial.", entregable: "ENTREGABLE · VERSIÓN USABLE" },
   { n: "FASE 04", color: "#D9B5A2", titulo: "Ajuste con uso real", texto: "Observamos el uso durante semanas y afinamos ritmos, notificaciones y densidad hasta que la herramienta desaparece.", entregable: "ENTREGABLE · AJUSTE Y DOCUMENTACIÓN" }
